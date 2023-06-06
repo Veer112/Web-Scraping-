@@ -1,0 +1,2384 @@
+<!DOCTYPE html>
+<html><!DOCTYPE html>
+<html lang="en-us">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="" />
+    <meta name="generator" content="Hugo 0.80.0 with theme C8yDocs">
+    <title>Overview - Software AG Cloud</title>
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+
+    <link rel="icon" href="data:image/x-icon;base64,AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAABILAAASCwAAAAAA%0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9HwEAPR8BKj0fAeo9HwH/PR8B/z0fAf89HwH/%0APR8B/z0fAf89HwH/PR8B/z0fAfk9HwHSPR8BeD0fARY9HwEAPR8BAAAAAAAAAAAAAAAAAAAAAAAA%0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD0fAQA9HwEqPR8B6j0f%0AAf89HwH/PR8B/z0fAf89HwH/PR8B/z0fAf89HwH/PR8B/z0fAf89HwH7PR8BtD0fASU9HwEAPR8B%0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0APR8BAD0fASo9HwHqPR8B/z0fAf89HwH/PR8B/z0fAf89HwH/PR8B/z0fAf89HwH/PR8B/z0fAf89%0AHwH/PR8Bsz0fARE9HwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0AAAAAAAAAAAAAAAAAAAA9HwEAPR8BKj0fAeo9HwH/PR8B/z0fAf89HwH/PR8B/z0fAf89HwH/PR8B%0A/z0fAf89HwH/PR8B/z0fAf89HwH7PR8BYj0fAQA9HwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD0fAQA9HwEqPR8B6j0fAf89HwH/PR8B/z0fAf89%0AHwH/PR8B/z0fAf89HwH/PR8B/z0fAf89HwH/PR8B/z0fAf89HwGuPR8BBT0fAQAAAAAAAAAAAAAA%0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPR8BAD0fASY9HwHTPR8B%0A5z0fAeY9HwHmPR8B5j0fAeY9HwHmPR8B5j0fAeY9HwHmPR8B5j0fAeY9HwHmPR8B6UAiA76SdDEo%0Ax69NGsCvRxu9tEQbu7pBG7i+Phe3wTwDt8A8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9%0AHwEAPR8BBj0fASM9HwEmPR8BJj0fASY9HwEmPR8BJj0fASY9HwEmPR8BJj0fASY9HwEmPR8BJj0f%0A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%0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9HwEAPR8BAD0fAWI9HwH7PR8B/z0fAf89HwH/PR8B%0A/z0fAf89HwH/PR8B/z0fAf89HwH/PR8B/z0fAf89HwH/PR8B5j0fASY9HwEAAAAAAAAAAAAAAAAA%0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9HwEAPR8BET0fAbM9%0AHwH/PR8B/z0fAf89HwH/PR8B/z0fAf89HwH/PR8B/z0fAf89HwH/PR8B/z0fAf89HwHmPR8BJj0f%0AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0AAD0fAQA9HwEAPR8BJT0fAbQ9HwH7PR8B/z0fAf89HwH/PR8B/z0fAf89HwH/PR8B/z0fAf89HwH/%0APR8B/z0fAeY9HwEmPR8BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0AAAAAAAAAAAAAAAAAAAAAAAAAAD0fAQA9HwEAPR8BFj0fAXg9HwHSPR8B+T0fAf89HwH/PR8B/z0f%0AAf89HwH/PR8B/z0fAf89HwH/PR8B5j0fASY9HwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/gAH%0A//4AA//+AAH//gAB//4AAP/+AAAD/gAAA////AP///wD///4B///8Af//8AH//wAD//gAA//gAAf%0A/gAAP/wAAH/4AAH/8AAH//AAP//gA///4A///+Af///AP///wD///8AAAH/AAAB//wAAf/+AAH//%0AgAB//8AAf//gAH8=">
+    
+
+    
+
+    
+
+
+    
+
+    
+    <link rel="stylesheet" href="/softwareagmycloud/style.css">
+
+    <link rel="stylesheet" type="text/css" href="/softwareagmycloud/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/softwareagmycloud/css/atom-one-light_hljs.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="/softwareagmycloud/css/manni_syntax.css">
+
+    <script src="/softwareagmycloud/js/vendor/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+  
+  <link rel="stylesheet" type="text/css" href="/softwareagmycloud/css/shepherd.css">
+  <link rel="stylesheet" type="text/css" href="/softwareagmycloud/css/tour.css">
+  <link rel="stylesheet" type="text/css" href="/softwareagmycloud/css/apigateway-gettingstarted-banner.css">
+
+   <script async src="https://cse.google.com/cse.js?cx=013118529819236822626:nqa9okblaqa"></script>
+
+  </head>
+<body data-spy="scroll" data-target="#main-nav" data-offset="80">
+
+
+<style type="text/css">
+   .techComCollapsed {
+      transform: rotate(90deg);
+      transition: transform .35s ease;
+      padding-top: 5px;
+   }
+
+   .techComExpanded {
+      transform: rotate(-90deg);
+      transition: transform .35s ease;
+      padding-top: 5px;
+   }
+
+    
+
+    
+
+
+    
+
+   .doc-logo-container{
+      display: flex;
+      width: max-content;
+   }
+
+
+
+   .master-options-wrapper {
+       
+       
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      column-gap: 8px;
+   }
+
+    
+
+    
+
+
+    
+
+    
+
+
+    
+
+   @media only screen and (max-width: 991px) {
+      .drop-img {
+          
+         transform: scale(0.8);
+      }
+
+       
+
+      #app-dropdown{
+         width: 270px;
+         padding: 4px;
+      }
+
+      #app-dropdown > li {
+         width: 100% !important;
+         text-align: left;
+         height: 50px;
+         justify-content: center;
+         margin: 0px;
+      }
+
+      #app-dropdown > li > a {
+         display: grid;
+         grid-template-columns: 60px auto;
+         align-items: center;
+         text-align: left;
+         font-size: 13px !important;
+      }
+
+      #app-dropdown > li > a > span {
+         text-align: left !important;
+      }
+
+      #app-dropdown > li > a > span br {
+         display: none;
+      }
+
+      .img-responsive {
+         display: inline !important;
+      }
+   }
+</style>
+
+
+
+   <style>
+      @media only screen and (max-width:779px){
+         table.gstl_50.gssb_c{
+            max-width: revert !important;
+            width: 88vw !important;
+            left: 50% !important;
+            transform: translate(-50%,0);
+            margin-left: -1px;
+             
+         }
+      }
+   </style>
+
+
+
+
+<nav class="main-top-bar" id="top-shadow">
+   <div class="d-flex container">
+
+      
+      
+
+            
+            <div class="doc-logo-container">
+               <a title="Documentation homepage" href="https://docs.webmethods.io" target="_self" style="display: flex;">
+                  <img class="no-zoom" id="sag-doc-logo-full" src='/softwareagmycloud/theme-graphics/sag-doc-logo-full.svg' alt="SoftwareAG Documentation">
+               </a>
+            </div>
+
+            <div class="master-options-wrapper">
+
+               
+
+               
+      
+               
+      
+               
+      
+               
+
+               
+               
+
+               
+               <script>
+                  (function () {
+                     var cx = '013118529819236822626:nqa9okblaqa';
+                     var gcse = document.createElement('script');
+                     gcse.type = 'text/javascript';
+                     gcse.async = true;
+                     gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                     var s = document.getElementsByTagName('script')[0];
+                     s.parentNode.insertBefore(gcse, s);
+                  })();
+               </script>
+               
+               <gcse:searchbox></gcse:searchbox>
+
+               
+               <div class="dropdown">
+                  <button type="button" data-toggle="dropdown" title="Products" aria-haspopup="true" aria-expanded="false" id="app-switcher-btn">
+                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 512.000000 512.000000"
+                     preserveAspectRatio="xMidYMid meet">
+                        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" stroke="none">
+                           <path d="M240 4275 l0 -595 593 2 592 3 0 590 0 590 -592 3 -593 2 0 -595z"/>
+                           <path d="M3690 4280 l0 -590 590 0 590 0 0 590 0 590 -590 0 -590 0 0 -590z"/>
+                           <path d="M1970 4270 l0 -590 590 0 590 0 0 590 0 590 -590 0 -590 0 0 -590z"/>
+                           <path d="M3680 2565 l0 -595 595 0 595 0 0 595 0 595 -595 0 -595 0 0 -595z"/>
+                           <path d="M230 2560 l0 -590 595 0 595 0 0 590 0 590 -595 0 -595 0 0 -590z"/>
+                           <path d="M1960 2555 l0 -595 590 0 590 0 0 595 0 595 -590 0 -590 0 0 -595z"/>
+                           <path d="M252 848 l3 -593 590 0 590 0 3 593 2 592 -595 0 -595 0 2 -592z"/>
+                           <path d="M3700 850 l0 -590 595 0 595 0 0 590 0 590 -595 0 -595 0 0 -590z"/>
+                           <path d="M1980 840 l0 -590 590 0 590 0 0 590 0 590 -590 0 -590 0 0 -590z"/>
+                        </g>
+                     </svg>
+                  </button>
+                  <ul class="dropdown-menu " id="app-dropdown">
+                     
+                     
+                        <li>
+                           <a href="https://docs.webmethods.io/integration/starthere/home/#gsc.tab=0">
+                              
+                              <img 
+                                 class="drop-img" 
+                                 src='/softwareagmycloud/theme-graphics/Icon-webMethods_Integration-On-darkFalse-MonochromeFalse.svg'
+                                 alt="webMethods.io Integration">
+                              <span style="text-align: center; white-space: normal;"> webMethods.io Integration </span>
+
+                           </a>
+                        </li>
+                     
+
+                     
+                     
+                        <li>
+                           
+                           
+
+                           
+                           <a href="https://docs.webmethods.io/apigateway/10.15.0/welcome/home/#gsc.tab=0"> 
+                              <img class="drop-img" src='/softwareagmycloud/theme-graphics/Icon-webMethods_API_Gateway-On-darkFalse-MonochromeFalse.svg' alt="">
+                              <span style="text-align: center;">webMethods.io API Gateway</span>
+                           </a>
+                        </li>
+
+                        
+                        <li>
+                           
+                           
+
+                           
+                           <a href="https://docs.webmethods.io/developerportal/10.15.0/welcome/home/#gsc.tab=0">
+                              <img class="drop-img" src='/softwareagmycloud/theme-graphics/Icon-webMethods_API_Gateway-On-darkFalse-MonochromeFalse.svg' alt="">
+                              <span style="text-align: center;">webMethods.io Developer Portal</span>
+                           </a>
+                        </li>
+                     
+
+                     
+                     
+                     
+
+                     
+                     
+
+                     
+                     
+
+                     
+                     
+
+                     
+                     
+                                    
+
+                     
+                     
+
+                     
+                     
+
+                     
+                     
+
+                     
+                     
+                     
+
+                     
+                     
+
+                     
+                     
+
+                     
+                     
+                     
+                     
+                     
+                     
+
+                     
+                     
+
+                     
+                     
+                     
+
+                     
+                     
+
+                     
+                     
+
+                     
+                     
+                     
+
+
+                     
+                     
+                     
+
+                     
+                     
+
+                     
+                     
+                     
+
+                     
+                     
+                     
+
+
+                     
+
+                     
+                        <li>
+                           <a href="https://docs.webmethods.io/b2b/welcome/home/#gsc.tab=0">
+                              <img class="drop-img img-responsive" 
+                                 src='/softwareagmycloud/theme-graphics/Icon-webMethods.io_B2B-On-darkFalse-MonochromeFalse.svg' alt="">
+                              <span style="text-align: center;"> webMethods.io B2B </span>
+                           </a>
+                        </li>
+                     
+
+                     
+                        <li>
+                           <a href="https://docs.webmethods.io/cloudcontainer">
+                              <img class="drop-img"
+                                 src='/softwareagmycloud/theme-graphics/Icon-webMethods_Cloud_Container-On-darkFalse-MonochromeFalse.svg' alt="">
+                              <span style="text-align: center; white-space: normal;">webMethods Cloud Container</span>
+                           </a>
+                        </li>
+                     
+
+                     <li>
+                        <a href="https://agileappscloud.info/aawiki/Welcome!">
+                           <img class="drop-img" src='/softwareagmycloud/theme-graphics/Icon-webMethods_AgileApps-On-darkFalse-MonochromeFalse.svg'
+                              alt="">
+                           <span style="text-align: center;"> webMethods AgileApps </span>
+                        </a>
+                     </li>
+
+                     
+                        <li>
+                           <a href="https://docs.webmethods.io/mft/starthere/home/#gsc.tab=0">
+                              <img class="drop-img" src='/softwareagmycloud/theme-graphics/Icon-webMethods_MFT-On-darkFalse-MonochromeFalse-1.svg'
+                                 alt=""><span style="text-align: center;"> webMethods.io MFT </span>
+                           </a>
+                        </li>
+                     
+
+                     
+                        <li>
+                           <a href="https://docs.webmethods.io/embed/landing/home/#gsc.tab=0">
+                              <img class="drop-img" src='/softwareagmycloud/theme-graphics/Icon-webMethods_Embed-On-darkFalse-MonochromeFalse-1.svg'
+                                 alt=""><span style="text-align: center;"> webMethods.io Embed </span>
+                           </a>
+                        </li>
+                     
+
+                     
+                        <li>
+                           <a href="https://docs.webmethods.io/e2e/starthere/home/#gsc.tab=0">
+                              <img class="drop-img" src='/softwareagmycloud/theme-graphics/Icon-webMethods_E2E-On-darkFalse-MonochromeFalse-1.svg'
+                                 alt=""><span style="text-align: center;">webMethods.io End-to-End Monitoring</span>
+                           </a>
+                        </li>
+                     
+
+                     
+
+                  </ul>
+               </div>
+
+               
+               <div class="dropdown">
+                  <button id="resources-btn" type="button" class="verelip" data-toggle="dropdown" title="Resources">
+                     <svg width="4" height="18" viewBox="0 0 4 18" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.832031 0.832031V3.16536H3.16536V0.832031H0.832031ZM0.832031 7.83203V10.1654H3.16536V7.83203H0.832031ZM0.832031 14.832V17.1654H3.16536V14.832H0.832031Z"/>
+                     </svg>                        
+                  </button>
+                  <ul class="dropdown-menu" id="res-dropdown">
+                     <li>
+                        <a href="https://www.softwareag.cloud/site/products.html#/" target="_blank">
+                           <img src='/softwareagmycloud/theme-graphics/SAG-cloud-logo.svg' alt="">
+                           <span>Software AG Cloud</span>
+                        </a>
+                     </li>
+
+                     
+
+                     <li id="techcom">
+                        
+                        <a href="#" onclick="event.preventDefault()">
+                           <img src='/softwareagmycloud/images/dlt-icon-tech-community.svg' alt="">
+                           <span>Tech Community</span>
+                           <i class="fa fa-chevron-right expand_collapse techComCollapsed"></i>
+                        </a>
+                     </li>
+
+                     <li class="techCom" style="display: none;">
+                        <a href="https://tech.forums.softwareag.com/tags/c/knowledge-base/6/software-ag-cloud">
+                           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="book" width="20" height="20"
+                              class="svg-inline--fa fa-book fa-w-14" role="img" xmlns="https://www.w3.org/2000/svg"
+                              viewBox="0 0 448 512">
+                              <path fill="currentColor"
+                                 d="M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z">
+                              </path>
+                           </svg>
+                           <span style="padding: 0.75rem; font-size: 0.9rem;">Knowledge base</span>
+                        </a>
+                     </li>
+
+                     <li class="techCom" style="display: none;">
+                        <a href="https://tech.forums.softwareag.com/tags/c/forum/1/Software-AG-Cloud">
+                           <svg class="whats-ico" xmlns:xlink="https://www.w3.org/1999/xlink"
+                              class="fa d-icon d-icon-far-question-circle svg-icon svg-string" xmlns="https://www.w3.org/2000/svg"
+                              width="20" height="20">
+                              <defs>
+                                 <symbol id="far-question-circle" viewBox="0 0 512 512">
+                                    <path
+                                       d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 448c-110.532 0-200-89.431-200-200 0-110.495 89.472-200 200-200 110.491 0 200 89.471 200 200 0 110.53-89.431 200-200 200zm107.244-255.2c0 67.052-72.421 68.084-72.421 92.863V300c0 6.627-5.373 12-12 12h-45.647c-6.627 0-12-5.373-12-12v-8.659c0-35.745 27.1-50.034 47.579-61.516 17.561-9.845 28.324-16.541 28.324-29.579 0-17.246-21.999-28.693-39.784-28.693-23.189 0-33.894 10.977-48.942 29.969-4.057 5.12-11.46 6.071-16.666 2.124l-27.824-21.098c-5.107-3.872-6.251-11.066-2.644-16.363C184.846 131.491 214.94 112 261.794 112c49.071 0 101.45 38.304 101.45 88.8zM298 368c0 23.159-18.841 42-42 42s-42-18.841-42-42 18.841-42 42-42 42 18.841 42 42z">
+                                    </path>
+                                 </symbol>
+                              </defs>
+                              <use xlink:href="#far-question-circle" fill="#1a4465"></use>
+                           </svg> <span style="padding: 0.75rem; font-size: 0.9rem;">Forum</span>
+                        </a>
+                     </li>
+
+                     <li class="techCom" style="display: none;">
+                        <a href="https://tech.forums.softwareag.com/tags/c/news/7/Software-AG-Cloud">
+                           <svg class="whats-ico" xmlns:xlink="https://www.w3.org/1999/xlink"
+                              class="fa d-icon d-icon-bullhorn svg-icon svg-string" xmlns="https://www.w3.org/2000/svg" width="20"
+                              height="20">
+                              <defs>
+                                 <symbol id="bullhorn" viewBox="0 0 512 512">
+                                    <path
+                                       d="M576 240c0-23.63-12.95-44.04-32-55.12V32.01C544 23.26 537.02 0 512 0c-7.12 0-14.19 2.38-19.98 7.02l-85.03 68.03C364.28 109.19 310.66 128 256 128H64c-35.35 0-64 28.65-64 64v96c0 35.35 28.65 64 64 64h33.7c-1.39 10.48-2.18 21.14-2.18 32 0 39.77 9.26 77.35 25.56 110.94 5.19 10.69 16.52 17.06 28.4 17.06h74.28c26.05 0 41.69-29.84 25.9-50.56-16.4-21.52-26.15-48.36-26.15-77.44 0-11.11 1.62-21.79 4.41-32H256c54.66 0 108.28 18.81 150.98 52.95l85.03 68.03a32.023 32.023 0 0 0 19.98 7.02c24.92 0 32-22.78 32-32V295.13C563.05 284.04 576 263.63 576 240zm-96 141.42l-33.05-26.44C392.95 311.78 325.12 288 256 288v-96c69.12 0 136.95-23.78 190.95-66.98L480 98.58v282.84z">
+                                    </path>
+                                 </symbol>
+                              </defs>
+                              <use xlink:href="#bullhorn" fill="#1a4465"></use>
+                           </svg><span style="font-size: 0.9rem; padding-left: 0.9rem;">News</span>
+                        </a>
+                     </li>
+
+                     
+
+                     
+
+                     
+
+                     
+
+                     
+
+                     
+                     
+
+                     
+
+                     
+
+                     
+
+                     
+                     
+                     
+                     <li>
+                        
+                        <a href="https://knowledge.softwareag.com" target="_blank">
+                           <img src='/softwareagmycloud/images/iLearn.svg' alt="">
+                           <span>Learning Portal</span>
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="https://empower.softwareag.com/" target="_blank">
+                           <img src='/softwareagmycloud/theme-graphics/empower.ico' alt="">
+                           <span>Empower Portal</span>
+                        </a>
+                     </li>
+
+                     <li class="documentation-tour-option" id="documentation-tour-option">
+                        <a href="javascript:void(0)">
+                           <img src='/softwareagmycloud/theme-graphics/onboarding-icon.svg' alt="">
+                           <span>Site Tour</span>
+                        </a>
+                     </li>
+
+                  </ul>
+               </div>
+         </div>
+   </div>
+</nav>
+
+
+
+<div class="responsive-nav">
+   
+</div>
+<gcse:searchresults noResultsString='No results found. Use a more generic search term.'></gcse:searchresults>
+
+<script>
+   $(document).ready(function () {
+      $("#techcom").click(function (e) {
+         e.stopPropagation();
+         $(".techCom").toggle("fade");
+         $(".expand_collapse").toggleClass("techComCollapsed techComExpanded");
+      });
+   });
+
+   
+   
+   
+   
+   
+   
+   
+   
+
+</script>
+
+
+
+
+<svg width="0" height="0" style='display: none;' xmlns="https://www.w3.org/2000/svg">
+   <symbol viewBox="0 0 128 128" id="search">
+      <path class="a-icon__main-dark"
+         d="M113.63,115.74,82.21,85.37c-2.86-3.26-4.18-2.45-6.89-.3-.33.27-.64.5-.9.7-7.36,5.3-14.78,7.88-22.69,7.88A39.18,39.18,0,1,1,90.91,54.47c0,7.17-1.17,10-3.3,15.21l-.47,1.14-7.51-3.06.48-1.16c2-4.91,2.7-6.56,2.7-12.13A31.08,31.08,0,1,0,51.73,85.55c6.15,0,12-2.08,17.94-6.36.18-.13.39-.29.61-.47,6.56-5.2,12.58-4.8,17.91,1.17l31.07,30Z">
+      </path>
+      <path class="a-icon__accent-colored" fill="currentColor"
+         d="M74.34,54.59H68a16,16,0,0,0-16-16v-6.3A22.28,22.28,0,0,1,74.34,54.59Z"></path>
+   </symbol>
+</svg><button title="Scroll to top" type="button" class="top-btn" onclick="$('body, html').animate({ scrollTop: 0 }, 500, 'swing')">TOP</button>
+<script>
+    
+    window.addEventListener('scroll',() => {
+        
+        if($(window).scrollTop() <= 80 && !$('button.top-btn').is(":hidden")){
+            $('button.top-btn').hide(0,() => {
+                $('#feedback-tab').stop().animate({bottom: "24px"});
+                $('#feedback-form').stop().animate({bottom: "-=24px"});
+
+                $('#mob_feedback-tab').stop().animate({bottom: "24px"});
+                $('#mob_feedbackform').stop().animate({bottom: "-=34px"});
+            });            
+        }
+        else if($(window).scrollTop() > 80 && $('button.top-btn').is(":hidden")){
+            $('#feedback-tab').stop().animate({bottom: "60px"},50,() => {
+                $('button.top-btn').show();
+                $('#feedback-form').stop().animate({bottom: "+=24px"});
+            });
+
+            $('#mob_feedback-tab').stop().animate({bottom: "60px"},50,() => {
+                $('button.top-btn').show();
+                $('#mob_feedbackform').stop().animate({bottom: "+=34px"});
+            });
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+     
+
+     
+
+    
+    .releases {
+      height: 32px;
+      margin-right: 8px;
+    }
+    
+    .releases .dropdown-toggle {
+      border: 1px solid #36597D;
+      font-size: 13px;
+      color: #36597D;
+      width: 140px;
+      background-color: white;
+      background-image: none;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      max-width: 160px;
+      height: 32px;
+      justify-content: center;
+    }
+
+    .release-caret {
+      display: inline-block;
+      border-top: 6px solid;
+      border-right: 6px solid transparent;
+      border-left: 6px solid transparent;
+      vertical-align: middle;
+      margin-left: 2px;
+      width: 0;
+      height: 0;
+      margin-left: 12px;
+    }
+
+    .text-truncate {
+      display: block;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    #current-dropdown-toggle1{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+     
+  </style>
+
+  <style>
+    *{
+      padding:0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+    }
+
+     
+
+    .welcome-page-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: max-content;
+         
+      padding-top: 124px;  
+      padding-bottom: 40px;
+    }
+
+    .content-container {
+      width: 89vw;
+      background-color: white;
+      box-shadow: 0px 2px 4px 1px rgba(1, 31, 61, 0.160784);
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+     
+
+    .banner-container {
+    height: 195px;
+    position: relative;
+    width: 100%;
+    background-color: #011e3c;
+    }
+
+    .banner-image-container{
+    position: relative;
+    width: 89vw;
+    height: 195px;
+    overflow: hidden;
+    }
+
+    .banner-living-flow {
+    position: absolute;
+    right: -2px;
+      display: none;
+    }
+
+    .banner-container h2 {
+    margin: 0;
+    padding: 0;
+    width: max-content;
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    display: flex;
+    flex-direction: column;
+    column-gap: 0px;
+    }
+
+    .banner-container h2 .title-name {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.006em;
+    color: #FFFFFF;
+    display: block;
+    }
+
+     
+
+    .banner-container .title-product {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: -0.009;
+    color: #FFFFFF;
+    margin-top: -2px;
+     
+    }
+
+    @media only screen and (min-width: 1101px){
+    #living-flow-XL{
+      display: block;
+    }	
+    }
+
+    @media only screen and (min-width: 881px) and (max-width: 1101px){
+    #living-flow-L{
+      display: block;
+    }	
+    }
+
+    @media only screen and (min-width: 671px) and (max-width: 881px){
+    #living-flow-M{
+      display: block;
+    }	
+    }
+
+    @media only screen and (max-width: 721px){
+    .banner-container h2{
+      left: 40px;
+    }	
+    }
+
+    @media only screen and (min-width: 521px) and (max-width: 671px){
+    #living-flow-S{
+      display: block;
+    }	
+    }
+
+    @media only screen and (max-width: 521px){
+    #living-flow-XS{
+      display: block;
+    }	
+    }
+
+    @media only screen and (max-width: 421px){
+    .banner-container h2 {
+        top: 85px;
+        left: 25px;
+    }
+
+    .banner-container h2 .title-name {
+        font-size: 24px;
+    }
+
+    .banner-container .title-name-2, 
+    .banner-container .title-product{
+        font-size: 20px;
+    }
+    }
+
+     
+
+     
+
+    .product-books-container {
+    padding: 40px 32px;
+    display: flex;
+    column-gap: 16px;
+    row-gap: 24px;
+    flex-wrap: wrap;
+    min-height: 500px;
+    height: max-content;
+    justify-content: center;
+    }
+
+    @media only screen and (min-width: 1007px){
+    .product-books-container{
+    width: max-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+    row-gap: 32px;
+    }
+    }
+
+    @media only screen and (min-width: 1483px){
+    .product-books-container{
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+    }
+
+    .product-books-container > p{
+    display: none;
+    }
+
+    .product-book-card{
+    max-width: 408px;
+    min-height: 226px;
+    height: max-content;
+    padding: 24px;
+     
+
+    background-color: white;
+    box-shadow: 0px 2px 12px 2px rgba(1, 31, 61, 0.12);
+
+    cursor: pointer;
+    transition: box-shadow 200ms ease-in-out;
+
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .product-book-card * {
+    margin: 0;
+    padding: 0;
+    }
+
+    .product-book-card:hover{
+    cursor: pointer;
+    box-shadow: 0px 8px 24px rgba(1, 31, 61, 0.2392);
+    }
+
+    .product-book-card h3{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #011F3D;
+    }
+
+    .product-book-card p {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    min-height: 134px;
+    height: max-content;
+    color: #011F3D;
+    }
+
+    .product-book-card a.card-readmore-link{
+    display: block;
+    width: max-content;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+     
+
+    letter-spacing: -0.01em;
+    text-decoration-line: underline;
+
+    color: #3399A6;
+    }
+
+    .product-book-card a.card-readmore-link:hover{
+    text-decoration: none;
+    }
+
+    .product-book-card a.card-readmore-link:focus{
+    outline: solid #3399A6 2px;
+    text-decoration: none;
+    }
+
+    .product-book-card a.card-readmore-link:active{
+    color: #1C5569;
+    }
+
+  </style>
+
+  <section class="welcome-page-content">
+
+    <div class="content-container">
+        <div class="banner-container">
+            <div class="banner-image-container">
+              <img id="living-flow-XL" class="banner-living-flow no-zoom" src='/softwareagmycloud/theme-graphics/welcome-living-flow-crop-XL.png' alt="">
+              <img id="living-flow-L" class="banner-living-flow no-zoom" src='/softwareagmycloud/theme-graphics/welcome-living-flow-crop-L.png' alt="">
+              <img id="living-flow-M" class="banner-living-flow no-zoom" src='/softwareagmycloud/theme-graphics/welcome-living-flow-crop-M.png' alt="">
+              <img id="living-flow-S" class="banner-living-flow no-zoom" src='/softwareagmycloud/theme-graphics/welcome-living-flow-crop-S.png' alt="">
+              <img id="living-flow-XS" class="banner-living-flow no-zoom" src='/softwareagmycloud/theme-graphics/welcome-living-flow-crop-XS.png' alt="">
+            </div>
+            <h2>
+                
+                <span class="title-name">Software AG</span>
+                <span class="title-product">Cloud</span>
+            </h2>
+            
+            
+
+        </div>
+        <div class="product-books-container">
+    <div class="product-book-card" onclick="window.location.href=&#34;/softwareagmycloud/release_readme/readme1017/&#34;">
+    <h3>Release Readme</h3>
+    <p>
+        Explore the release highlights and fixes for Software AG Cloud.
+    </p>
+      
+        <a title="Click to know more" class="card-readmore-link" href=/softwareagmycloud/release_readme/readme1017/ target="_self">Read More</a>
+    
+</div>
+
+    <div class="product-book-card" onclick="window.location.href=&#34;/softwareagmycloud/allowed_ips/cloudproducts/&#34;">
+    <h3>webMethods.io IP Addresses</h3>
+    <p>
+        Learn more about the webMethods.io IP Addresses for cloud connectivity in each region, for Software AG Cloud products.
+    </p>
+      
+        <a title="Click to know more" class="card-readmore-link" href=/softwareagmycloud/allowed_ips/cloudproducts/ target="_self">Read More</a>
+    
+</div>
+    
+    <div class="product-book-card" onclick="window.location.href=&#34;/softwareagmycloud/configuration/config_iden_prov/&#34;">
+    <h3>Configure Identity Providers</h3>
+    <p>
+        Configure identity providers to authenticate Software AG Cloud users.
+    </p>
+      
+        <a title="Click to know more" class="card-readmore-link" href=/softwareagmycloud/configuration/config_iden_prov/ target="_self">Read More</a>
+    
+</div>
+</div>
+
+      </div>
+  </section>
+
+  
+
+<div>
+  <span class="feedback feedback-icon" id="feedback-tab" data-toggle="tooltip" data-placement="bottom" title="Provide feedback"></span>
+  <span class="feedback feedback-icon" id="mob_feedback-tab" data-toggle="tooltip" data-placement="bottom" title="Provide feedback"></span>
+  <form id="feedback-form" onchange="formChangeHandler()" onsubmit="feedbackSubmitHandler(event)">
+    <div class="feedback-form-inner">
+      <div class="formheader d-flex container mt-5">
+        <span>Did you find the content helpful?</span>
+      </div>
+      <div class="feedback-radio-container">
+
+        <div class="response-option-item">
+          <input type="radio" id="yes-radio-btn" name="response" value="yes" onchange="responseChangeHandler(event,'yes-response','partly-response no-response')"/>
+          <label class="response-option-label" for="yes-radio-btn">
+            <img class="response-default no-zoom" src='/softwareagmycloud/theme-graphics/yes-feedback-default.svg' alt=":)">
+            <img class="response-active no-zoom" src='/softwareagmycloud/theme-graphics/yes-feedback-active.svg' alt=":)">
+            <span>Yes</span>
+          </label>
+        </div>
+ 
+        <div class="response-option-item">
+          <input type="radio" id="partly-radio-btn" name="response" value="partly" onchange="responseChangeHandler(event,'partly-response','yes-response no-response')"/>
+          <label class="response-option-label" for="partly-radio-btn">
+            <img class="response-default no-zoom" src='/softwareagmycloud/theme-graphics/partly-feedback-default.svg' alt=":)">
+            <img class="response-active no-zoom" src='/softwareagmycloud/theme-graphics/partly-feedback-active.svg' alt=":)">
+            <span>Partly</span>
+          </label>
+        </div>
+
+        <div class="response-option-item">
+          <input type="radio" id="no-radio-btn" name="response" value="no" onchange="responseChangeHandler(event,'no-response','partly-response yes-response')"/>
+          <label class="response-option-label" for="no-radio-btn">
+            <img class="response-default no-zoom" src='/softwareagmycloud/theme-graphics/no-feedback-default.svg' alt=":)">
+            <img class="response-active no-zoom" src='/softwareagmycloud/theme-graphics/no-feedback-active.svg' alt=":)">
+            <span>No</span>
+          </label>
+        </div>
+
+      </div>
+
+      <div class="feedbackoptions container mt-3 disabled">
+        <span>I have feedback on:</span>
+        <div class="mt-2 mb-2">
+          <div class="form-check form-check-inline disabled">
+            <input unchecked type="radio" name="feedbackoption" value="article" class="form-check-input" id="article" value="">
+            <label for="article" class="form-check-label">This page or site</label>
+            <input unchecked  type="radio" name="feedbackoption" value="specific" id="specific" class="form-check-input ml-2" value="">
+            <label for="specific" class="form-check-label">Specific content</label>
+            <span id="required-label">This is a required field</span>
+          </div>
+
+          <div id="selected-text-container">
+            <div id="guidetext" class="mt-2">Please select the text of concern to enter your comments</div>
+            <textarea 
+              disabled id="copiedText" 
+              name="copiedtext" 
+              value="" 
+              placeholder="Please select the text on this page and enter your comments"></textarea>
+            <a href="#" onclick="clearText()" id="clearlink">Clear</a>
+          </div>
+          
+          <div class="form-group">
+            <textarea disabled 
+              id="comments" name="comments" 
+              rows="10" cols="35" 
+              placeholder="Please enter your comments here." 
+              class="form-control" 
+              maxlength=2000 
+              onfocus="countChars(this);" 
+              onkeyup="countChars(this);"></textarea>
+            <label for="comments">Comments</label>
+            <p id="charNum">2000 characters remaining</p>
+          </div>
+
+          <div class="email-group">
+            <input type="email" id="userEmail" class="form-control" placeholder="Your email address" />
+            <label for="userEmail">Email (Optional)</label>
+            
+          </div>
+
+          <div id="loading"></div>
+        </div>
+
+        <div class="form-submit-group">
+          <a href="https://www.softwareag.com/en_corporate/privacy.html" id="privacyPolicy2" target="_blank">
+            Privacy policy
+            <span class="divClass">
+              <span id="tooltip_title">Privacy policy</span>
+              <span id="privacy_tooltip">The information collected from this form will be used solely to improve the
+                documentation. Your email address will be used only to respond to your feedback. Click the link to view
+                the complete privacy policy.</span>
+            </span>
+          </a>
+          <div class="form-btn-container">
+            <button type="reset" class="float-right mt-3 mb-3" type="button" onclick="clearFormData();hideFeedbackHandler();" id="cancel">Cancel</button>
+            <button disabled type="submit" class="float-right mt-3 ml-1 mb-3" type="button" onclick="FormUIValidationHandler()" id="submit">Submit</button>
+          </div>
+        </div>
+        <div id="dummy_space">
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <form id="mob_feedbackform" class="d-md-none">
+    <div class="mob_feedbackform_title mob_container">
+      <span>Did you find the content helpful?</span>
+      <button class="mob_feedbackform_minimizeBtn" onclick="mobileHideFeedbackHandler(event)">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="4  4 16 16" width="24" height="24">
+          <title>minimize feedback</title>
+          <path d="M9 8.25l1.2-1.25 4.8 5-4.8 5-1.2-1.25 3.6-3.75-3.6-3.75z"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="mob_container">
+      <div class="d-flex mt-2">
+        
+
+        <div class="response-option-item">
+          <input type="radio" id="mob_yes-radio-btn" name="mob_responseValue" value="yes" onchange="mobileOnChangeHandler()"/>
+          <label class="response-option-label" for="mob_yes-radio-btn">
+            <img class="response-default no-zoom" src='/softwareagmycloud/theme-graphics/yes-feedback-default.svg' alt=":)">
+            <img class="response-active no-zoom" src='/softwareagmycloud/theme-graphics/yes-feedback-active.svg' alt=":)">
+            <span>Yes</span>
+          </label>
+        </div>
+
+        <div class="response-option-item">
+          <input type="radio" id="mob_no-radio-btn" name="mob_responseValue" value="no" onchange="mobileOnChangeHandler()"/>
+          <label class="response-option-label" for="mob_no-radio-btn">
+            <img class="response-default no-zoom" src='/softwareagmycloud/theme-graphics/no-feedback-default.svg' alt=":)">
+            <img class="response-active no-zoom" src='/softwareagmycloud/theme-graphics/no-feedback-active.svg' alt=":)">
+            <span>No</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="mob-form-group">
+        <label class="mob_comments_label" for="comments">Comments</label>
+        <textarea 
+          id="mob_comments" name="mob_comments" 
+          rows="5" cols="35" 
+          placeholder="Enter your comments here." 
+          class="mob-form-control" 
+          maxlength=2000
+          onfocus="mobileOnChangeHandler()"
+          onkeyup="mobileOnChangeHandler()"></textarea>
+      </div>
+      
+      
+      <div id="message"></div>
+
+      <div class="mob_form-btn-container">
+        <button type="reset" class="clear" type="button" id="mob_cancel" onclick="mobileResetForm()">Cancel</button>
+        <button type="submit" class="submit" type="button" id="mob_submit" onclick="mobileValidateForm(event)">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<script type="text/javascript">
+
+  $(document).ready(() => {
+
+    clearFormData();
+    hideFeedbackHandler();
+
+    mobileResetForm();
+    mobileHideFeedbackHandler();
+
+    
+    
+    
+    
+    $('#feedback-tab').click(()=>{
+      $('#feedback-form').fadeToggle('fast',() => $('#feedback-tab').toggleClass('down-arrow'));
+    });
+
+    $('#mob_feedback-tab').click(()=>{
+      $('#mob_feedbackform').fadeToggle('fast',() => $('#mob_feedback-tab').toggleClass('down-arrow'));
+    });
+
+    
+    let prevScrollpos = window.pageYOffset;
+    window.addEventListener('scroll',() => {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos != currentScrollPos) {
+        $("#feedback-form").hide();
+        $("#feedback-tab").removeClass('down-arrow');
+      }
+    });
+
+    
+    $('input[type="radio"]#specific').on('change',(e) => {
+      if(e.target.checked){
+        
+        document.getElementById("copiedText").value = '';
+        document.getElementById("guidetext").innerHTML = 'Please select the text of concern to enter your comments';
+        
+        $("textarea#comments").prop('disabled', true);
+
+        
+        $('#feedback-form').removeClass('article');
+        $('#feedback-form').addClass('specific');
+
+        
+        $(".main-content, .main-content-2").on('mousedown',hideFeedbackHandler);
+
+        
+        document.addEventListener('mouseup',copySelectedText);
+
+        
+        $("#feedback-form").on('mousedown',stopPropagationHandler);
+        $("#feedback-tab").on('mousedown',stopPropagationHandler);
+
+        
+        formChangeHandler()
+      }
+    });
+
+    
+    $('input[type="radio"]#article').on('change',(e) => {
+      if(e.target.checked){
+
+        
+        document.getElementById("copiedText").value = '';
+        document.getElementById("guidetext").innerHTML = 'Please select the text of concern to enter your comments';
+        
+        $("textarea#comments").prop('disabled', false);
+
+        
+        $('#feedback-form').addClass('article');
+        $('#feedback-form').removeClass('specific');
+
+        
+        $(".main-content, .main-content-2").off('mousedown',hideFeedbackHandler);
+        document.removeEventListener('mouseup',copySelectedText);
+        $("#feedback-form").off('mousedown',stopPropagationHandler);
+        $("#feedback-tab").off('mousedown',stopPropagationHandler);
+
+        
+        formChangeHandler();
+      }
+    });
+    
+  });
+
+  function stopPropagationHandler(e){
+    e.stopPropagation();
+  }
+
+  
+  function hideFeedbackHandler(){
+    $("#feedback-form").hide(); 
+    $("#feedback-tab").removeClass('down-arrow');
+  }
+
+  function showFeedbackHandler(){
+    $("#feedback-form").show();
+    $('#feedback-tab').addClass('down-arrow');
+  }
+
+  function copySelectedText() {
+    
+     let thetext = getTextSelectionHandler();
+     if (thetext.length >= 1) {
+      
+      document.getElementById("copiedText").value = thetext;
+      document.getElementById("guidetext").innerHTML = thetext;
+      $("textarea#comments").prop('disabled', false);
+      showFeedbackHandler();
+    }
+
+    
+    formChangeHandler();
+  }
+
+  function getTextSelectionHandler() {
+    let selectedText = "";
+    if (window.getSelection().containsNode(document.body, true)) {
+      selectedText = window.getSelection().toString();
+    }
+    return selectedText;
+  }
+
+  function clearText(){
+    document.getElementById("copiedText").value = '';
+    document.getElementById("guidetext").innerHTML = 'Please select the text of concern to enter your comments';
+    $("textarea#comments").prop('disabled', true);
+    formChangeHandler();
+  }
+
+  
+  function clearFormData() {
+    document.getElementById("feedback-form").reset();
+    $('[name="response"]:checked').each((pos,ele) => ele.checked = false)
+    $('[name="feedbackoption"]:checked').each((pos,ele) => ele.checked = false);
+    document.getElementById('copiedText').value = '';
+    document.getElementById("guidetext").innerHTML = 'Please select the text of concern to enter your comments';
+    document.getElementById('comments').value = '';
+    document.getElementById('userEmail').value = '';
+    $(".main-content, .main-content-2").off('mousedown',hideFeedbackHandler);
+    document.removeEventListener('mouseup',copySelectedText);
+    $("#feedback-form").off('mousedown',stopPropagationHandler);
+    $("#feedback-tab").off('mousedown',stopPropagationHandler);
+    $('#feedback-form').removeClass('yes-response no-response partly-response specific article');
+    document.getElementById('loading').innerHTML = "";
+    $('#comments').prop('disabled', true);
+    $('#submit').prop('disabled', true);
+  }
+
+  
+  
+  function countChars(ele){
+    let maxLength = 2000;
+    let strLength = ele.value.length;
+    let infoText;
+
+    if(strLength == 0){
+      infoText = '2000 characters remaining';
+    }
+    else if (strLength > maxLength) {
+      infoText = strLength + ' out of ' + maxLength + ' characters';
+    } else {
+      infoText = (maxLength - strLength) + ' characters remaining';
+    }
+
+    document.getElementById("charNum").innerHTML = infoText;
+    formChangeHandler();
+  }
+
+  
+  function responseChangeHandler(event,addClass,removeClass){
+    if(event.target.checked){
+      $('#feedback-form').removeClass(removeClass);
+      $('#feedback-form').addClass(addClass);
+    }
+  }
+
+  
+  function FormUIValidationHandler(){
+    let validationState = false;
+    let responseValue = $('[name="response"]:checked').length?$('[name="response"]:checked')[0].value:'';
+    let feedbackScope = $('[name="feedbackoption"]:checked').length?$('[name="feedbackoption"]:checked')[0].value:'';
+    let copiedText = document.getElementById('copiedText').value;
+    let commentsText = document.getElementById('comments').value;
+    let email = document.getElementById('userEmail').value;
+
+    if(responseValue === 'yes'){
+      validationState = true;
+    }
+    else if(responseValue === 'partly' || responseValue === 'no'){
+      if(feedbackScope === 'article' && commentsText.length) validationState = true;
+      else if (feedbackScope === 'specific' && copiedText.length && commentsText.length) validationState = true;
+    }
+
+    
+    return validationState;
+  }
+
+  
+  function formChangeHandler(e){
+    e? e.stopPropagation() : '';
+    let validityState = FormUIValidationHandler();
+    if(validityState) $('#submit').prop('disabled', false);
+    else $('#submit').prop('disabled', true);
+    document.querySelector('#loading').innerHTML = '';
+  }
+
+  function getPageURL() {
+    return window.location.href;
+  }
+
+  function feedbackSubmitHandler(e){
+    e.preventDefault();
+    sendResponse();
+  }
+
+  function sendResponse() {
+
+    let validationState = FormUIValidationHandler();
+    if(!validationState){
+      document.querySelector('#loading').innerHTML = '<span style="color: #D22D3D;">Invalid input, please check your responses and try again</span>'
+    }
+    else{
+      document.querySelector('#loading').innerHTML = '';
+    }
+
+    let responsevalue = $('[name="response"]:checked').length?$('[name="response"]:checked')[0].value:'';
+    let feedbackoption = $('[name="feedbackoption"]:checked').length?$('[name="feedbackoption"]:checked')[0].value:'';
+    let feedback_on = '';
+    if (feedbackoption == "specific") {
+      feedback_on = "Specific content in this article.";
+    } else if (feedbackoption == "article") {
+      feedback_on = "This article or documentation in general.";
+    }
+    let copiedtext = document.getElementById('copiedText').value;
+    let comments = document.getElementById('comments').value;
+    if (window.location.href.indexOf("home") > 0) {
+      var article_title = "Product landing page";
+    }
+    else {
+      var article_title = document.getElementsByTagName("h2")[0].innerHTML;
+    }
+    var email = document.getElementById('userEmail').value;
+    var product = getProductName();
+    var pageURL = getPageURL();
+
+    $.ajax({
+      type: "POST",
+      url: 'https://docfeedback.int-aws-us.webmethods.io/runflow/run/sync/1RHiXt9MXS',
+      data: {
+        article_title: article_title,
+        responsevalue: responsevalue,
+        feedbackoption: feedback_on,
+        copiedtext: copiedtext,
+        comments: comments,
+        email: email,
+        product: product,
+        pageURL: pageURL
+      },
+      success: function (res) {
+        
+        clearFormData();
+        $('#loading').html("<span class='container alert alert-success'>Thank you! We value your feedback.</span>");
+        setTimeout(function () {
+          document.getElementById('loading').innerHTML = "";
+          hideFeedbackHandler();
+        }, 2000); 
+      }
+    });
+  }
+</script>
+
+
+<script>
+  
+
+
+  
+  function mobileHideFeedbackHandler(event=null){
+    if(event) event.preventDefault();
+    $("#mob_feedbackform").hide();
+    $("#mob_feedback-tab").removeClass('down-arrow');
+    document.getElementById("message").classList.remove('alert-error');
+    document.getElementById("message").classList.remove('alert-success');
+    document.getElementById("message").innerHTML = "";
+  }
+
+  
+  function mobileShowFeedbackHandler(){
+    $("#mob_feedbackform").show();
+    $('#mob_feedback-tab').addClass('down-arrow');
+  }
+
+  function mobileOnChangeHandler(event){
+    document.getElementById("message").classList.remove('alert-error');
+    document.getElementById("message").classList.remove('alert-success');
+    document.getElementById("message").innerHTML = "";
+  }
+
+  
+  
+  function mobileResetForm() {
+    
+    document.getElementById("mob_comments").value = "";
+    document.getElementById("message").classList.remove('alert-error');
+    document.getElementById("message").classList.remove('alert-success');
+    document.getElementById("message").innerHTML = "";
+    document.querySelectorAll('input[name="mob_responseValue"]').forEach( e => e.checked = false);
+    $("#mob_feedbackform").hide();
+    $("#mob_feedback-tab").removeClass('down-arrow');
+  }
+
+  
+  
+  
+  function mobileValidateForm(e) {
+    e.preventDefault();
+    let mobForm = new FormData(document.getElementById("mob_feedbackform"));
+    let mobComments = mobForm.get("mob_comments");
+    let mobResponseValue = mobForm.get("mob_responseValue");
+    let messageBox = document.getElementById('message');
+
+    let noResponse = ! Boolean(mobResponseValue); 
+    let noComment = ! Boolean(mobComments.trim().length); 
+
+    if( noResponse || (mobResponseValue === 'no' && noComment ) ){
+      
+      
+      
+
+      messageBox.classList.add('alert-error');
+      messageBox.classList.remove('alert-success');
+      messageBox.innerHTML = "Invalid input, please check your responses and try again";
+    }
+    else{
+      messageBox.innerHTML = "";
+      
+      mobileSendResponse();
+    }
+  }
+
+  
+  function mobileSendResponse() {
+    let product = getProductName();
+    let mobForm = new FormData(document.getElementById("mob_feedbackform"));
+    let mob_comments = mobForm.get("mob_comments");
+    let mob_responseValue = mobForm.get("mob_responseValue") || '';
+
+    let article = document.getElementsByTagName("h1");
+    let productName = document.querySelector('.title-product');
+    let article_title = article.length ? article[0].innerHTML : (productName?( productName.innerHTML + ' Product Welcome Page'):'Main landing page');
+
+   $.ajax({
+     type: "POST",
+     url: 'https://docfeedback.int-aws-us.webmethods.io/runflow/run/sync/1shkZsCOwc',
+     data: {
+       article_title: article_title,
+       responsevalue: mob_responseValue,
+       comments: mob_comments,
+       product: product
+     },
+     success: function (res) {
+       
+       
+
+       
+        document.getElementById("mob_comments").value = "";
+        document.getElementById("message").classList.remove('alert-error');
+        document.getElementById("message").classList.remove('alert-success');
+        document.getElementById("message").innerHTML = "";
+        document.querySelectorAll('input[name="mob_responseValue"]').forEach( e => e.checked = false);
+
+        document.getElementById("message").classList.add('alert-success');
+        document.getElementById("message").classList.remove('alert-error');
+        document.getElementById('message').innerHTML = "Thank you! We value your feedback.";
+
+        setTimeout(function () {
+          document.getElementById("message").classList.remove('alert-error');
+          document.getElementById("message").classList.remove('alert-success');
+          document.getElementById("message").innerHTML = "";
+          mobileHideFeedbackHandler();
+        }, 3000);
+     }
+   });
+ }
+
+ 
+
+
+ 
+
+ 
+ function getProductName() {
+  
+  var product = String(window.location.pathname.split("/")[1]);
+  if (product == "api") {
+    product = "API";
+  } else if (product == "integration") {
+    product = "Integration";
+  } else if (product == "b2b") {
+    product = "B2B";
+  }
+  return product;
+}
+
+ 
+</script>
+
+
+<style>
+   
+
+ 
+
+
+ 
+
+
+ 
+ 
+
+
+ 
+
+ 
+
+
+ 
+ 
+
+
+ 
+ 
+	 
+	 
+	.dlt-footer,
+	 
+	 
+	 
+ 
+
+
+ 
+
+ 
+
+
+ 
+
+ 
+
+	footer{
+		text-align: center;
+		padding-bottom: 5px;
+		padding-top: 40px !important;
+		padding-left: 40px !important;
+		padding-right: 40px !important;
+		padding-bottom: 32px !important;
+		border-top: solid #f2f2f2 1px;
+		margin-top: 16px;
+	}
+
+	footer *{
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 16px;
+		color: #011F3D;
+	}
+
+	
+
+	footer a{
+		text-decoration-line: underline;
+		color: #058192;
+	}
+
+	footer a:hover{
+		text-decoration-line:none;
+	}
+
+	footer a:focus{
+		outline: solid #058192 2px;
+		text-decoration: none;
+	}
+
+	footer a:active{
+		color: #1C5569;
+	}
+
+</style>
+
+
+
+
+
+<footer>
+	<p>Copyright © 2019-2023 Software AG, Darmstadt, Germany and/or Software AG USA Inc., Reston, VA, USA, and/or its subsidiaries and/or its affiliates and/or their licensors. | <a href="https://www.softwareag.com/en_corporate/impressum.html"> Imprint</a> | <a href="https://www.softwareag.com/en_corporate/privacy.html">Privacy policy</a></p>
+</footer>
+
+<!-- Essential Scripts -->
+
+<!-- jQuery -->
+<script src="/softwareagmycloud/js/vendor/jquery.min.js"></script>
+<script src="/softwareagmycloud/js/vendor/bootstrap.bundle.min.js"></script>
+<script src="/softwareagmycloud/js/vendor/clipboard.js"></script>
+
+<script src="/softwareagmycloud/js/vendor/highlight.min.js"></script>
+<script src="/softwareagmycloud/js/main.js"></script>
+
+
+<script type="text/javascript" src="/softwareagmycloud/js/vendor/shepherd.min.js"></script>
+<script type="text/javascript" src="/softwareagmycloud/js/vendor/shepherd.min.js.map"></script>
+<script type="text/javascript" src="/softwareagmycloud/js/vendor/tour.js"></script>
+<script type="text/javascript" src="/softwareagmycloud/js/vendor/banners.js"></script>
+<script type="text/javascript">
+  
+  var guide = document.querySelectorAll('.dropdown-menu-item.guide');
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+      
+      
+      
+  
+  
+
+  
+  $(".breadcrumb-item").on("click", function () {
+    setTimeout(() => {
+      window.scrollTo(window.scrollX, window.scrollY - 50);
+    }, 0100);
+  });
+
+  $(window).resize(function () {
+    if ($(".breadcrumb-bar").height() > "500px") {
+      display: none;
+    }
+    var browserZoomLevel = Math.round(window.devicePixelRatio * 100);
+    if (browserZoomLevel > 125) {
+      $(".description").css("font-size", "12px");
+    }
+    if (browserZoomLevel > 125 && browserZoomLevel < 150) {
+      $(".all-links").css("margin-top", "10px");
+    }
+    if (browserZoomLevel >= 150) {
+      $(".mycard-heading").css("margin-bottom", "22px");
+    }
+    else {
+      $(".description").css("font-size", "16px");
+      $(".mycard-heading").css("margin-bottom", "0px");
+    }
+  });
+
+  
+
+  window.onload = function () {
+
+    
+    apigatewayBannerShow();
+    
+    document.getElementById('gsc-i-id1').placeholder = 'Search';
+    
+    document.getElementById('gsc-i-id1').addEventListener('change',(e) => {
+      if(e.target.value.length){
+        document.querySelector('#gs_id50 > tbody > tr').classList.add('hover');
+      }
+      else{
+        document.querySelector('#gs_id50 > tbody > tr').classList.remove('hover');
+      }
+    });
+    
+    document.getElementById('gsc-i-id1').addEventListener('focus',(e) => {
+      document.querySelector('#gs_id50 > tbody > tr').classList.add('focus');
+    });
+
+    document.getElementById('gsc-i-id1').addEventListener('focusout',(e) => {
+      document.querySelector('#gs_id50 > tbody > tr').classList.remove('focus');
+    });
+
+    var pathName = window.location.pathname;
+    var currentProduct = window.location.pathname.split('/')[1];
+    if (currentProduct == "api") {
+      $(".main-content-2").css("height", "800px");
+    }
+    
+    var currentBook = window.location.pathname.split('/')[3];
+    
+
+    
+    
+    addReplayTour();
+    tourStateHandler();
+
+    if (currentBook == "webmethods_api_cloud__api_gateway_user_s_guide") {
+      var guides = document.getElementsByClassName("dropdown-menu-item guide");
+      for (var i = 0; i < guides.length; i++) {
+        var guideName = guides[i].href.split("/")[5];
+        if (guideName.trim() == "webmethods_developer_portal") {
+          guides[i].style.display = "none";
+        }
+        if (guideName.trim() == "webmethods_api_portal") {
+          guides[i].style.display = "none";
+        }
+        if (guideName.trim() == "release_readme_dpo") {
+          guides[i].style.display = "none";
+        }
+        if (guideName.trim() == "release_readme_portal") {
+          guides[i].style.display = "none";
+        }
+      }
+    }
+    if (currentBook == "webmethods_developer_portal") {
+      var guides = document.getElementsByClassName("dropdown-menu-item guide");
+      for (var j = 0; j < guides.length; j++) {
+        var guideName = guides[j].href.split("/")[5];
+        if (guideName.trim() == "webmethods_api_cloud__api_gateway_user_s_guide") {
+          guides[j].style.display = "none";
+        }
+        if (guideName.trim() == "webmethods_api_portal") {
+          guides[j].style.display = "none";
+        }
+        if (guideName.trim() == "release_readme_gw") {
+          guides[j].style.display = "none";
+        }
+      }
+    }
+    if (currentBook == "webmethods_api_portal") {
+      var guides = document.getElementsByClassName("dropdown-menu-item guide");
+      for (var k = 0; k < guides.length; k++) {
+        var guideName = guides[k].href.split("/")[5];
+        if (guideName.trim() == "webmethods_api_cloud__api_gateway_user_s_guide") {
+          guides[k].style.display = "none";
+        }
+        if (guideName.trim() == "webmethods_developer_portal") {
+          guides[k].style.display = "none";
+        }
+        if (guideName.trim() == "release_readme_gw") {
+          guides[k].style.display = "none";
+        }
+        if (guideName.trim() == "release_readme_dpo") {
+          guides[k].style.display = "none";
+        }
+        
+        
+        
+        
+      }
+    }
+    if (currentBook == "about") {
+      var guides = document.getElementsByClassName("dropdown-menu-item guide");
+      for (var l = 0; l < guides.length; l++) {
+        var guideName = guides[l].href.split("/")[5];
+        if (guideName.trim() == "release_readme_gw") {
+          guides[l].style.display = "none";
+        }
+        if (guideName.trim() == "release_readme_dpo") {
+          guides[l].style.display = "none";
+        }
+        if (guideName.trim() == "release_readme_portal") {
+          guides[l].style.display = "none";
+        }
+      }
+    }
+    if (currentBook == "release_readme_dpo") {
+      var guides = document.getElementsByClassName("dropdown-menu-item guide");
+      for (var l = 0; l < guides.length; l++) {
+        var guideName = guides[l].href.split("/")[5];
+        if (guideName.trim() == "webmethods_api_cloud__api_gateway_user_s_guide") {
+          guides[l].style.display = "none";
+        }
+        if (guideName.trim() == "release_readme_gw") {
+          guides[l].style.display = "none";
+        }
+      }
+    }
+    if (currentBook == "release_readme_gw") {
+      var guides = document.getElementsByClassName("dropdown-menu-item guide");
+      for (var l = 0; l < guides.length; l++) {
+        var guideName = guides[l].href.split("/")[5];
+        if (guideName.trim() == "webmethods_developer_portal") {
+          guides[l].style.display = "none";
+        }
+        if (guideName.trim() == "release_readme_dpo") {
+          guides[l].style.display = "none";
+        }
+        if (guideName.trim() == "release_readme_portal") {
+          guides[l].style.display = "none";
+        }
+        if (guideName.trim() == "webmethods_api_portal") {
+          guides[l].style.display = "none";
+        }
+      }
+    }
+
+    if (currentBook == "release_readme_portal") {
+      var guides = document.getElementsByClassName("dropdown-menu-item guide");
+      for (var m = 0; m < guides.length; m++) {
+        var guideName = guides[m].href.split("/")[5];
+        if (guideName.trim() == "webmethods_developer_portal") {
+          guides[m].style.display = "none";
+        }
+        if (guideName.trim() == "release_readme_dpo") {
+          guides[m].style.display = "none";
+        }
+        if (guideName.trim() == "release_readme_gw") {
+          guides[m].style.display = "none";
+        }
+        if (guideName.trim() == "webmethods_api_cloud__api_gateway_user_s_guide") {
+          guides[m].style.display = "none";
+        }
+      }
+    }
+
+
+    
+    
+
+    
+    
+
+    
+    if (localStorage.getItem("flag")) {
+      setTimeout(() => {
+        window.scrollTo(window.scrollX, window.scrollY - 50);
+      }, 0050);
+    }
+    localStorage.setItem("flag", false);
+
+    let tourState = localStorage.getItem("tour");
+    let apiBannerState = localStorage.getItem("api-banner");
+
+    localStorage.clear();
+
+    localStorage.setItem("tour", tourState);
+    apiBannerState?localStorage.setItem('api-banner',apiBannerState):'';
+
+    
+    var loadURL = location.href.split("&gsc.tab=0");
+    window.location = loadURL[0];
+    
+    if (window.location.href.indexOf('connector-bundle') > 0) {
+      
+      document.getElementById('search3').removeAttribute('data-action');
+      document.querySelector('#gsc-i-id1').placeholder = 'Search';
+      $("#gsc-iw-id1").hide();
+      $(".gsc-search-button-v2").bind({
+        click: function () {
+          
+          if ($('#gsc-i-id1').is(":hidden")) {
+            $("#gsc-iw-id1").show();
+            $('.docLogo').hide();
+            $("#gsc-i-id1").show();
+          }
+          else {
+            $("#gsc-i-id1").hide();
+            $('.docLogo').show();
+            $("#gsc-iw-id1").hide();
+          }
+        },
+      });
+      $('#search3').click(function () {
+        $(".gsc-search-button-v2").click();
+        
+      })
+      $("#gs_cb50").bind({
+        click: function () {
+          $("#gsc-iw-id1").hide();
+          $('.docLogo').show();
+        },
+      });
+      document.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+          if ($('.gsc-results-wrapper-overlay').is(":visible")) {
+            
+            $("#gsc-i-id1").hide();
+            $('.docLogo').show();
+          }
+        }
+      });
+      document.addEventListener("click", (evt) => {
+        const flyoutElement = document.getElementById("gsc-i-id1");
+        const flyoutElement2 = document.getElementById("gs_cb50");
+        const flyoutElement3 = document.querySelector(".gsc-search-button-v2");
+        const flyoutElement4 = document.getElementById("search3");
+
+        let targetElement = evt.target; 
+
+        if (!(targetElement == flyoutElement || targetElement == flyoutElement2 || targetElement == flyoutElement3 || targetElement == flyoutElement4)) {
+          
+          if ($('#gsc-i-id1').is(":visible")) {
+            $("#gsc-i-id1").val('');
+            $("#gsc-i-id1").hide();
+            $("#gsc-iw-id1").hide();
+            $('.docLogo').show();
+          }
+        }
+      });
+    }
+    else {
+      document.getElementById('search2').removeAttribute('data-action');
+      document.querySelector('#gsc-i-id1').placeholder = 'Search';
+      $("#gsc-iw-id1").hide();
+      $(".gsc-search-button-v2").bind({
+        click: function () {
+          
+          if ($('#gsc-i-id1').is(":hidden")) {
+            $("#gsc-iw-id1").show();
+            $('.docLogo').hide();
+            $("#gsc-i-id1").show();
+          }
+          else {
+            $("#gsc-i-id1").hide();
+            $('.docLogo').show();
+            $("#gsc-iw-id1").hide();
+          }
+        },
+      });
+      $('#search2').click(function () {
+        $(".gsc-search-button-v2").click();
+        
+      })
+      $("#gs_cb50").bind({
+        click: function () {
+          $("#gsc-iw-id1").hide();
+          $('.docLogo').show();
+        },
+      });
+      document.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+          if ($('.gsc-results-wrapper-overlay').is(":visible")) {
+            
+            $("#gsc-i-id1").hide();
+            $('.docLogo').show();
+          }
+        }
+      });
+      document.addEventListener("click", (evt) => {
+        const flyoutElement = document.getElementById("gsc-i-id1");
+        const flyoutElement2 = document.getElementById("gs_cb50");
+        const flyoutElement3 = document.querySelector(".gsc-search-button-v2");
+        const flyoutElement4 = document.getElementById("search2");
+
+        let targetElement = evt.target; 
+
+
+        if (!(targetElement == flyoutElement || targetElement == flyoutElement2 || targetElement == flyoutElement3 || targetElement == flyoutElement4)) {
+          
+          if ($('#gsc-i-id1').is(":visible")) {
+            $("#gsc-i-id1").val('');
+            $("#gsc-i-id1").hide();
+            $("#gsc-iw-id1").hide();
+            $('.docLogo').show();
+          }
+        }
+      });
+    }
+  }
+  
+
+  
+  var $animation_elements = $('.animation-element');
+  var $window = $(window);
+
+  function check_if_in_view() {
+    var window_height = $window.height();
+    var window_top_position = $window.scrollTop();
+    var window_bottom_position = (window_top_position + window_height);
+
+    $.each($animation_elements, function () {
+      var $element = $(this);
+      var element_height = $element.outerHeight();
+      var element_top_position = $element.offset().top;
+      
+      
+      var element_bottom_position = (element_top_position + element_height);
+
+      if ((element_bottom_position >= window_top_position) &&
+        (element_top_position <= window_bottom_position)) {
+        $element.addClass('in-view');
+        
+      } else {
+        $element.removeClass('in-view');
+      }
+    });
+  }
+  $window.on('scroll resize', check_if_in_view);
+  $window.trigger('scroll');
+
+  
+  
+
+  $(".main-top-bar .nav a").click(function () {
+    if (document.querySelector(".bi-caret-down-fill").style.transform == "rotate(270deg)") {
+      document.querySelector(".bi-caret-down-fill").style.transform = "none";
+    } else {
+      document.querySelector(".bi-caret-down-fill").style.transform = "rotate(270deg)";
+    }
+  });
+
+
+  document.addEventListener("click", (evt) => {
+
+    const clickedElement1 = document.querySelector(".nav-item.nav-link.dropdown-toggle b");
+    const clickedElement2 = document.querySelector(".bi-caret-down-fill");
+    const clickedElement3 = document.querySelector(".nav-link.dropdown-item");
+
+    let targetElement = evt.target;
+
+    
+    
+
+    if (targetElement == clickedElement1) {
+      
+    }
+    else if (targetElement == clickedElement3) {
+      
+    }
+    else if (targetElement.parentNode == clickedElement2) {
+      
+    }
+    else {
+      
+      if ($("#releaseddm").is(":hidden")) {
+        clickedElement2.style.transform = "none";
+      }
+    }
+  });
+
+
+
+
+
+  
+
+  
+  
+  
+  
+
+  $("#main-nav").on("click", function () {
+    setTimeout(() => {
+      window.scrollTo(window.scrollX, window.scrollY - 50);
+    }, 0100);
+    
+  });
+
+  $(window).on("scroll", function () {
+    
+    var h2All = document.querySelectorAll('#main-nav a'); 
+    $('#main-nav a').each(function (i) {
+      if ($(this).is('.active')) {
+        
+
+        let h2href = h2All[i].getAttribute('href'); 
+        
+
+        h2get = document.querySelectorAll(`[data-clipboard-text='${h2href}']`); 
+        
+
+        h2parent = h2get[0].parentNode; 
+        
+
+        h3child = $(h2parent).nextUntil().filter('h2, h3, h4, h5, h6'); 
+        
+
+        t = document.querySelector('#toc');
+
+        let subCount = h3child.length;
+
+        
+        
+        
+        
+        
+        
+    
+        t.innerHTML = ``;
+
+        if(subCount){
+          for (let i = 0; i < subCount; i++) {
+            if ($(h3child[i]).prop("tagName") == "H2") {
+              if ((h3child[i].innerText).includes(":")) {
+                t.innerHTML += `<a href="#${h3child[i].id}" class="right-toc-h2">${h3child[i].innerText.split(":")[0] + ":" + "\n" + h3child[i].innerText.split(":")[1]}</a>`;
+              }
+              else {
+                t.innerHTML += `<a href="#${h3child[i].id}" class="right-toc-h2">${h3child[i].innerText}</a>`;
+              }
+            }
+            if ($(h3child[i]).prop("tagName") == "H3") {
+              if ((h3child[i].innerText).includes(":")) {
+                t.innerHTML += `<a href="#${h3child[i].id}" class="right-toc-h3">${h3child[i].innerText.split(":")[0] + ":" + "\n" + h3child[i].innerText.split(":")[1]}</a>`;
+              }
+              else {
+                t.innerHTML += `<a href="#${h3child[i].id}" class="right-toc-h3">${h3child[i].innerText}</a>`;
+              }
+            }
+            if ($(h3child[i]).prop("tagName") == "H4") {
+              if ((h3child[i].innerText).includes(":")) {
+                t.innerHTML += `<a href="#${h3child[i].id}" class="right-toc-h4">${h3child[i].innerText.split(":")[0] + ":" + "\n" + h3child[i].innerText.split(":")[1]}</a>`;
+              }
+              else {
+                t.innerHTML += `<a href="#${h3child[i].id}" class="right-toc-h4">${h3child[i].innerText}</a>`;
+              }
+            }
+            if ($(h3child[i]).prop("tagName") == "H5") {
+              if ((h3child[i].innerText).includes(":")) {
+                t.innerHTML += `<a href="#${h3child[i].id}" class="right-toc-h5">${h3child[i].innerText.split(":")[0] + ":" + "\n" + h3child[i].innerText.split(":")[1]}</a>`;
+              }
+              else {
+                t.innerHTML += `<a href="#${h3child[i].id}" class="right-toc-h5">${h3child[i].innerText}</a>`;
+              }
+            }
+            if ($(h3child[i]).prop("tagName") == "H6") {
+              if ((h3child[i].innerText).includes(":")) {
+                t.innerHTML += `<a href="#${h3child[i].id}" class="right-toc-h6">${h3child[i].innerText.split(":")[0] + ":" + "\n" + h3child[i].innerText.split(":")[1]}</a>`;
+              }
+              else {
+                t.innerHTML += `<a href="#${h3child[i].id}" class="right-toc-h6">${h3child[i].innerText}</a>`;
+              }
+            }
+          }
+        }
+        else{
+          t.innerHTML = '<span class="right-toc-empty">No subtopics in this<br>section</span>';
+        }
+        
+        
+        
+        
+        for (let i = 0; i < subCount; i++) {
+          let currentElement = h3child[i];
+          let j = (i + 1) % (subCount);
+          if (j == 0) {
+            checkTocLastElement(currentElement.id);
+            { break; }
+          }
+          let nextElement = h3child[j];
+          checkToc(currentElement.id, nextElement.id);
+        }
+      }
+      else {
+        
+      }
+    });
+  });
+
+  function checkToc(id, nextid) {
+    var myElement = document.getElementById(id);
+    var myNextElement = document.getElementById(nextid);
+    var bounding = myElement.getBoundingClientRect();
+    var nextbounding = myNextElement.getBoundingClientRect();
+    if (bounding.bottom <= 188) {
+      if (nextbounding.top >= 212) {
+         
+        
+        
+        var div = document.getElementById("toc");
+        
+        
+        
+        
+        
+        
+        
+        
+        var txt = document.querySelector(`a[href="#${id}"]`).text;
+        $(".breadcrumb-item.currenth3").text(txt);
+        
+        
+        document.querySelector(`a[href="#${id}"]`).id = "current";
+        document.querySelector(`a[href="#${id}"]`).scrollIntoView({
+          alignToTop: "true",
+          behavior: 'smooth'
+        });
+        
+        
+        document.querySelector(`a[href="#${id}"]`).classList.add('right-toc-active');
+        
+        
+        
+        
+      }
+      else {
+        
+      }
+    }
+    else {
+      
+    }
+
+  }
+
+  
+
+  function checkTocLastElement(id) {
+    var myElement = document.getElementById(id);
+    var bounding = myElement.getBoundingClientRect();
+    if (bounding.top <= 188) {
+       
+      
+      var div = document.getElementById("toc");
+      
+
+      var lastTxt = document.querySelector(`a[href="#${id}"]`).text;
+      $(".breadcrumb-item.currenth3").text(lastTxt);
+      
+      
+      
+      document.querySelector(`a[href="#${id}"]`).classList.add('right-toc-active');
+      
+      
+      
+      
+    }
+    else {
+      
+    }
+  }
+
+  
+  $("#toc").click(function (e) {
+    $(".breadcrumb-item.currenth3").hide();
+    setTimeout(() => {
+      window.scrollTo(window.scrollX, window.scrollY - 177);
+    }, 050);
+    setTimeout(() => {
+      let url = $(e.target).attr("href");
+      
+      document.querySelector(`a[href="${url}"]`).classList.add('right-toc-active');
+      
+      
+      
+      
+      
+    }, 0200);
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+  </body>
+</html>

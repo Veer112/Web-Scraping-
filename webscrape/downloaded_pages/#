@@ -1,0 +1,838 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<meta name="google-site-verification" content="wssczNBSqEtzXNutUEFFwNao3CkXUk5hCdGxf3dBU0A" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="title" content="Home | webMethods.io Documentation" />
+	<meta name="description" content=" Home | webMethods.io Documentation | webMethods.io Documentation" />
+	<meta name="keywords" content="builtio, flow, integration, api, b2b, documentation, ipaas, automation, mft, cloud container, embed" />
+	<meta name="index" content="Home | webMethods.io Documentation" />
+	<title>webMethods.io Documentation</title>
+	<link rel="stylesheet" href="static/css/roboto.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+	<link rel="icon" href="data:image/x-icon;base64,AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAABILAAASCwAAAAAA%0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9HwEAPR8BKj0fAeo9HwH/PR8B/z0fAf89HwH/%0APR8B/z0fAf89HwH/PR8B/z0fAfk9HwHSPR8BeD0fARY9HwEAPR8BAAAAAAAAAAAAAAAAAAAAAAAA%0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD0fAQA9HwEqPR8B6j0f%0AAf89HwH/PR8B/z0fAf89HwH/PR8B/z0fAf89HwH/PR8B/z0fAf89HwH7PR8BtD0fASU9HwEAPR8B%0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0APR8BAD0fASo9HwHqPR8B/z0fAf89HwH/PR8B/z0fAf89HwH/PR8B/z0fAf89HwH/PR8B/z0fAf89%0AHwH/PR8Bsz0fARE9HwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0AAAAAAAAAAAAAAAAAAAA9HwEAPR8BKj0fAeo9HwH/PR8B/z0fAf89HwH/PR8B/z0fAf89HwH/PR8B%0A/z0fAf89HwH/PR8B/z0fAf89HwH7PR8BYj0fAQA9HwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD0fAQA9HwEqPR8B6j0fAf89HwH/PR8B/z0fAf89%0AHwH/PR8B/z0fAf89HwH/PR8B/z0fAf89HwH/PR8B/z0fAf89HwGuPR8BBT0fAQAAAAAAAAAAAAAA%0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPR8BAD0fASY9HwHTPR8B%0A5z0fAeY9HwHmPR8B5j0fAeY9HwHmPR8B5j0fAeY9HwHmPR8B5j0fAeY9HwHmPR8B6UAiA76SdDEo%0Ax69NGsCvRxu9tEQbu7pBG7i+Phe3wTwDt8A8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9%0AHwEAPR8BBj0fASM9HwEmPR8BJj0fASY9HwEmPR8BJj0fASY9HwEmPR8BJj0fASY9HwEmPR8BJj0f%0A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%0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9HwEAPR8BAD0fAWI9HwH7PR8B/z0fAf89HwH/PR8B%0A/z0fAf89HwH/PR8B/z0fAf89HwH/PR8B/z0fAf89HwH/PR8B5j0fASY9HwEAAAAAAAAAAAAAAAAA%0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9HwEAPR8BET0fAbM9%0AHwH/PR8B/z0fAf89HwH/PR8B/z0fAf89HwH/PR8B/z0fAf89HwH/PR8B/z0fAf89HwHmPR8BJj0f%0AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0AAD0fAQA9HwEAPR8BJT0fAbQ9HwH7PR8B/z0fAf89HwH/PR8B/z0fAf89HwH/PR8B/z0fAf89HwH/%0APR8B/z0fAeY9HwEmPR8BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%0AAAAAAAAAAAAAAAAAAAAAAAAAAD0fAQA9HwEAPR8BFj0fAXg9HwHSPR8B+T0fAf89HwH/PR8B/z0f%0AAf89HwH/PR8B/z0fAf89HwH/PR8B5j0fASY9HwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/gAH%0A//4AA//+AAH//gAB//4AAP/+AAAD/gAAA////AP///wD///4B///8Af//8AH//wAD//gAA//gAAf%0A/gAAP/wAAH/4AAH/8AAH//AAP//gA///4A///+Af///AP///wD///8AAAH/AAAB//wAAf/+AAH//%0AgAB//8AAf//gAH8=">
+	<!-- <link type="text/css" rel="stylesheet" href="static/css/main.css" hreflang="en" /> -->
+	<link type="text/css" rel="stylesheet" href="./style.css" hreflang="en" />
+	<script src="js/vendor/jquery.min.js"></script>
+	<!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script> -->
+	
+	<link rel="stylesheet" type="text/css" href="static/css/shepherd.css">
+	<link rel="stylesheet" type="text/css" href="static/css/tour.css">
+	
+</head>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WT29734" height="0" width="0"
+		style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<body> 
+	<!-- Main living flow banner section -->
+	<nav class="main-header header-for-home">
+		<img id="main-flow-img-XL" src="./theme-graphics/Hero Flow_Sense_crop_1001px.png" alt=""/>
+		<img id="main-flow-img-L" src="./theme-graphics/Hero Flow_Sense_crop_1000px-850px.png" alt=""/>
+		<img id="main-flow-img-M" src="./theme-graphics/Hero Flow_Sense_crop_850px-601px.png" alt=""/>
+		<img id="main-flow-img-S" src="./theme-graphics/Hero Flow_Sense_crop_600px-450px.png" alt=""/>
+		<img id="main-flow-img-XS" src="./theme-graphics/Hero Flow_Sense_crop_450px.png" alt=""/>
+		<div class="titleContainer">
+			<div class="searchContainer">
+				<div class="searchbox-container">
+					<h1>webMethods.io Documentation</h1>	
+					<div class="search-box home-search-box">
+					<!-- Google Custom Search -->
+						<div class="gsc-form">
+							<script>
+								(function () {
+									var cx = '013118529819236822626:nqa9okblaqa';
+									var gcse = document.createElement('script');
+									gcse.type = 'text/javascript';
+									gcse.async = true;
+									gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+									var s = document.getElementsByTagName('script')[0];
+									s.parentNode.insertBefore(gcse, s);
+								})();
+							</script>
+							<gcse:searchbox></gcse:searchbox>
+						</div>
+						<!-- /Google Custom Search -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<img id="sag-logo" src="./theme-graphics/SAG_logo-white.png" alt="SoftwareAG"/>
+	</nav>
+	<!-- END: Main living flow banner section -->
+
+	<!-- Cards section -->
+	<section class="main-content-section">
+		<div class="product-card-container">
+			<!-- IMP Note: All product descriptions must be within 260 characters (including spaces) -->
+			<div class="product-card" onclick="window.location.href='integration/starthere/home/index.html'">
+				<h3>webMethods.io</h3>
+				<h4>Integration</h4>
+				<p>
+					Is a powerful iPaaS (integration platform as a service) that provides a combination of capabilities offered by ESBs, data integration systems, API management tools, and B2B gateways.
+				</p>
+				<a class="card-knowmore-link" title="Click to know more" href="integration/starthere/home/index.html" target="_self">Read More</a>
+			</div>
+
+			<div class="product-card" onclick="window.location.href='apigateway/10.15.0/welcome/home#/'">
+				<h3>webMethods.io</h3>
+				<h4>API Gateway</h4>
+				<p>
+					Securely manages and exposes your APIs to third-party developers, partners, and other consumers for use in web, mobile, and IoT applications, and creates new business models.
+				</p>
+				<a class="card-knowmore-link" title="Click to know more" href="apigateway/10.15.0/welcome/home#/" target="_self">Read More</a>
+			</div>
+
+			<div class="product-card" onclick="window.location.href='developerportal/10.15.0/welcome/home#/'">
+				<h3>webMethods.io</h3>
+				<h4>Developer Portal</h4>
+				<p>
+					Hosts APIs, packages, and other assets that help consumers build their solutions. Onboards API consumers, enables them to try APIs, and facilitates collaboration with other community members.
+				</p>
+				<a class="card-knowmore-link" title="Click to know more" href="developerportal/10.15.0/welcome/home#/" target="_self">Read More</a>
+			</div>
+
+			<div class="product-card" onclick="window.location.href='b2b/welcome/home'">
+				<h3>webMethods.io</h3>
+				<h4>B2B</h4>
+				<p>
+					Exchanges business documents on the cloud with customers, distributors, and trading partners. The exchange is seamless, with no hardware investments, maintenance, or upgrades.
+				</p>
+				<a class="card-knowmore-link" title="Click to know more" href="b2b/welcome/home" target="_self">Read More</a>
+			</div>
+
+			<div class="product-card" onclick="window.location.href='mft/starthere/home'">
+				<h3>webMethods.io</h3>
+				<h4>MFT</h4>
+				<p>
+					Provides both client and server support for multiple file transfer protocols including FTPs and SFTP.  Exchange any file seamlessly irrespective of its size, and access third party cloud storage solutions such as Amazon S3 and Microsoft Azure.
+				</p>
+				<a class="card-knowmore-link" title="Click to know more" href="mft/starthere/home" target="_self">Read More</a>
+			</div>
+
+			<div class="product-card" onclick="window.location.href='embed/landing/home'">
+				<h3>webMethods.io</h3>
+				<h4>Embed</h4>
+				<p>
+					Unlocks your product’s full potential with robust integration capabilities and embeds powerful data integrations into your app experience with ease.
+				</p>
+				<a class="card-knowmore-link" title="Click to know more" href="embed/landing/home" target="_self">Read More</a>
+			</div>
+
+			<div class="product-card" onclick="window.location.href='e2e/starthere/home/index.html'">
+				<h3>webMethods.io</h3>
+				<h4>End-to-End Monitoring</h4>
+				<p>
+					Provides the flow of a business transaction from start to finish across webMethods.io cloud systems and identifies errors that occur during a business transaction and the application.
+				</p>
+				<a class="card-knowmore-link" title="Click to know more" href="e2e/starthere/home/index.html" target="_self">Read More</a>
+			</div>
+
+			<div class="product-card" onclick="window.location.href='cloudcontainer/welcome/home'">
+				<h3>webMethods</h3>
+				<h4>Cloud Container</h4>
+				<p>
+					Unlocks the power of API-led and DevOps-led integration, and enables your organization to build, test, connect and deploy your enterprise-scale software and applications quickly to the cloud.
+				</p>
+				<a class="card-knowmore-link" title="Click to know more" href="cloudcontainer/welcome/home" target="_self">Read More</a>
+			</div>
+			
+			<div class="product-card" onclick="window.location.href='softwareagmycloud/starthere/home/#gsc.tab=0/'">
+				<h3>Software AG</h3>
+				<h4>Cloud</h4>
+				<p>
+				    Is your single application for managing the environments, users, security policies, and single sign-on configurations for all your Software AG Cloud products.
+				</p>
+				<a class="card-knowmore-link" title="Click to know more" href="softwareagmycloud/starthere/home/#gsc.tab=0" target="_self">Read More</a>
+			</div>
+		</div>
+	</section>
+	<!-- END: Cards section -->
+
+	<!-- Feedback button -->
+		<span class="feedback feedback-icon" id="feedback-tab" data-toggle="tooltip" data-placement="bottom" title="Provide feedback"></span>
+	<!-- END: Feedback button -->
+
+	<!-- Mobile Feedback button -->
+		<span class="feedback feedback-icon" id="mob_feedback-tab" data-toggle="tooltip" data-placement="bottom" title="Provide feedback"></span>
+	<!-- END: Mobile feedback button -->
+
+	<!-- PC Feedback form HTML-->
+	<form id="feedback-form" onchange="formChangeHandler()" onsubmit="feedbackSubmitHandler(event)">
+		<div class="feedback-form-inner">
+		  <div class="formheader d-flex container mt-5">
+			<span>Did you find the content helpful?</span>
+		  </div>
+		  <div class="feedback-radio-container">
+	
+			<div class="response-option-item">
+			  <input type="radio" id="yes-radio-btn" name="response" value="yes" onchange="responseChangeHandler(event,'yes-response','partly-response no-response')"/>
+			  <label class="response-option-label" for="yes-radio-btn">
+				<img class="response-default no-zoom" src='./theme-graphics/yes-feedback-default.svg' alt=":)">
+				<img class="response-active no-zoom" src='./theme-graphics/yes-feedback-active.svg' alt=":)">
+				<span>Yes</span>
+			  </label>
+			</div>
+	 
+			<div class="response-option-item">
+			  <input type="radio" id="partly-radio-btn" name="response" value="partly" onchange="responseChangeHandler(event,'partly-response','yes-response no-response')"/>
+			  <label class="response-option-label" for="partly-radio-btn">
+				<img class="response-default no-zoom" src='./theme-graphics/partly-feedback-default.svg' alt=":/">
+				<img class="response-active no-zoom" src='./theme-graphics/partly-feedback-active.svg' alt=":/">
+				<span>Partly</span>
+			  </label>
+			</div>
+	
+			<div class="response-option-item">
+			  <input type="radio" id="no-radio-btn" name="response" value="no" onchange="responseChangeHandler(event,'no-response','partly-response yes-response')"/>
+			  <label class="response-option-label" for="no-radio-btn">
+				<img class="response-default no-zoom" src='./theme-graphics/no-feedback-default.svg' alt=":(">
+				<img class="response-active no-zoom" src='./theme-graphics/no-feedback-active.svg' alt=":(">
+				<span>No</span>
+			  </label>
+			</div>
+	
+		  </div>
+	
+		  <div class="feedbackoptions container mt-3 disabled">
+			<span>I have feedback on:</span>
+			<div class="mt-2 mb-2">
+			  <div class="form-check form-check-inline disabled">
+				<input unchecked type="radio" name="feedbackoption" value="article" class="form-check-input" id="article" value="">
+				<label for="article" class="form-check-label">This page or site</label>
+				<input unchecked  type="radio" name="feedbackoption" value="specific" id="specific" class="form-check-input ml-2" value="">
+				<label for="specific" class="form-check-label">Specific content</label>
+				<span id="required-label">2000 characters remaining</span>
+			  </div>
+	
+			  <div id="selected-text-container">
+				<div id="guidetext" class="mt-2">Please select the text of concern to enter your comments</div>
+				<textarea 
+				  disabled id="copiedText" 
+				  name="copiedtext" 
+				  value="" 
+				  placeholder="Please select the text on this page and enter your comments"></textarea>
+				<a href="#" onclick="clearText()" id="clearlink">Clear</a>
+			  </div>
+			  
+			  <div class="form-group">
+				<textarea disabled 
+				  id="comments" name="comments" 
+				  rows="10" cols="35" 
+				  placeholder="Please enter your comments here." 
+				  class="form-control" 
+				  maxlength=2000 
+				  onfocus="countChars(this);" 
+				  onkeyup="countChars(this);"></textarea>
+				<label for="comments">Comments</label>
+				<p id="charNum">This is a required field</p>
+			  </div>
+	
+			  <div class="email-group">
+				<input type="email" id="userEmail" class="form-control" placeholder="Your email address" />
+				<label for="userEmail">Email (Optional)</label>
+				<!-- <span id="emailInvalid">Invalid email address</span> -->
+			  </div>
+	
+			  <div id="loading"></div>
+			</div>
+	
+			<div class="form-submit-group">
+			  <a href="https://www.softwareag.com/en_corporate/privacy.html" id="privacyPolicy2" target="_blank">
+				Privacy policy
+				<span class="divClass">
+				  <span id="tooltip_title">Privacy policy</span>
+				  <span id="privacy_tooltip">The information collected from this form will be used solely to improve the
+					documentation. Your email address will be used only to respond to your feedback. Click the link to view
+					the complete privacy policy.</span>
+				</span>
+			  </a>
+			  <div class="form-btn-container">
+				<button type="reset" class="float-right mt-3 mb-3" type="button" onclick="clearFormData();hideFeedbackHandler();" id="cancel">Cancel</button>
+				<button disabled type="submit" class="float-right mt-3 ml-1 mb-3" type="button" onclick="FormUIValidationHandler()" id="submit">Submit</button>
+			  </div>
+			</div>
+			<div id="dummy_space">
+			</div>
+		  </div>
+		</div>
+	</form>
+	<!-- PC Feedback form html ends-->
+
+	<!-- Mobile Feedback form -->
+	<form id="mob_feedbackform" class="d-md-none">
+		<div class="mob_feedbackform_title mob_container">
+		  <span>Did you find the content helpful?</span>
+		  <button class="mob_feedbackform_minimizeBtn" onclick="mobileHideFeedbackHandler(event)">
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="4  4 16 16" width="24" height="24">
+			  <title>minimize feedback</title>
+			  <path d="M9 8.25l1.2-1.25 4.8 5-4.8 5-1.2-1.25 3.6-3.75-3.6-3.75z"></path>
+			</svg>
+		  </button>
+		</div>
+		<div class="mob_container">
+		  <div class="d-flex mt-2">
+			<!-- <button type="button" class="mr-2 mb-3" id="mob_yes" value="Yes" onclick="mobileSaveResponse(this.id)"><i
+				class="fa fa-thumbs-up"></i><span class="thumbs-text"> Yes</span></button> -->
+	
+			<div class="response-option-item">
+			  <input type="radio" id="mob_yes-radio-btn" name="mob_responseValue" value="yes" onchange="mobileOnChangeHandler()"/>
+			  <label class="response-option-label" for="mob_yes-radio-btn">
+				<img class="response-default no-zoom" src='./theme-graphics/yes-feedback-default.svg' alt=":)">
+				<img class="response-active no-zoom" src='./theme-graphics/yes-feedback-active.svg' alt=":)">
+				<span>Yes</span>
+			  </label>
+			</div>
+	
+			<div class="response-option-item">
+			  <input type="radio" id="mob_no-radio-btn" name="mob_responseValue" value="no" onchange="mobileOnChangeHandler()"/>
+			  <label class="response-option-label" for="mob_no-radio-btn">
+				<img class="response-default no-zoom" src='./theme-graphics/no-feedback-default.svg' alt=":)">
+				<img class="response-active no-zoom" src='./theme-graphics/no-feedback-active.svg' alt=":)">
+				<span>No</span>
+			  </label>
+			</div>
+		  </div>
+	
+		  <div class="mob-form-group">
+			<label class="mob_comments_label" for="comments">Comments</label>
+			<textarea 
+			  id="mob_comments" name="mob_comments" 
+			  rows="5" cols="35" 
+			  placeholder="Enter your comments here." 
+			  class="mob-form-control" 
+			  maxlength=2000
+			  onfocus="mobileOnChangeHandler()"
+			  onkeyup="mobileOnChangeHandler()"></textarea>
+		  </div>
+		  
+		  <div id="message"></div>
+	
+		  <div class="mob_form-btn-container">
+			<button type="reset" class="clear" type="button" id="mob_cancel" onclick="mobileResetForm()">Cancel</button>
+			<button type="submit" class="submit" type="button" id="mob_submit" onclick="mobileValidateForm(event)">Submit</button>
+		  </div>
+		</div>
+	  </form>
+	<!-- END: Mobile Feedback form -->
+	
+	<!-- Footer section -->
+	<footer>
+		Copyright © 2019-2023 Software AG, Darmstadt, Germany and/or Software AG USA Inc., Reston, VA, USA, and/or its subsidiaries and/or its affiliates and/or their licensors. | <a href="https://www.softwareag.com/en_corporate/impressum.html">Imprint</a> | <a href="https://www.softwareag.com/en_corporate/privacy.html">Privacy policy</a>
+	</footer>
+	<!-- END: footer section -->
+
+	<!-- to the top btn -->
+	<button title="Scroll to top" type="button" class="top-btn" onclick="$('body, html').animate({ scrollTop: 0 }, 500, 'swing')">TOP</button>
+	<!--END: to the top btn -->
+
+	<!-- <script src="js/feedback.js"></script> -->
+	<script type="text/javascript" src="js/vendor/shepherd.min.js"></script>
+	<script type="text/javascript" src="js/vendor/shepherd.min.js.map"></script>
+	<script type="text/javascript" src="js/vendor/tour.js"></script>
+	
+	<script>
+		var content_type = "home_2018";
+		window.onload = function () {
+			document.getElementById('gsc-i-id1').placeholder = 'Search';
+			// addTourBand();
+			tourStateHandler();
+		};
+
+		function topFunction() {
+			document.body.scrollTop = 0; // For Safari
+			document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+		} 
+	</script>
+
+	<script>
+		// $('button.top-btn').hide();
+		window.addEventListener('scroll',() => {
+			// if(window.pageYOffset == 81){
+			if($(window).scrollTop() <= 80 && !$('button.top-btn').is(":hidden")){
+				$('button.top-btn').hide(0,() => {
+					$('#feedback-tab').stop().animate({bottom: "24px"});
+					$('#feedback-form').stop().animate({bottom: "-=24px"});
+	
+					$('#mob_feedback-tab').stop().animate({bottom: "24px"});
+					$('#mob_feedbackform').stop().animate({bottom: "-=34px"});
+				});            
+			}
+			else if($(window).scrollTop() > 80 && $('button.top-btn').is(":hidden")){
+				$('#feedback-tab').stop().animate({bottom: "60px"},50,() => {
+					$('button.top-btn').show();
+					$('#feedback-form').stop().animate({bottom: "+=24px"});
+				});
+	
+				$('#mob_feedback-tab').stop().animate({bottom: "60px"},50,() => {
+					$('button.top-btn').show();
+					$('#mob_feedbackform').stop().animate({bottom: "+=34px"});
+				});
+			}
+		});
+	</script>
+
+	<!-- PC form functions -->
+	<script type="text/javascript">
+
+		$(document).ready(() => {
+
+			clearFormData();
+			hideFeedbackHandler();
+
+			mobileResetForm();
+			mobileHideFeedbackHandler();
+
+			//  Following function adds 'click' functionality to the feedback icon
+			// Actions performed: 
+			// 1. Toggle (alternate b/w i.e. hide/show) the feedback form
+			// 2. Toggle (alternate b/w adding & removing) the 'down-arrow' class for the feedback icon
+			$('#feedback-tab').click(()=>{
+				// console.log('test')
+				$('#feedback-form').fadeToggle('fast',() => $('#feedback-tab').toggleClass('down-arrow'));
+			});
+
+			$('#mob_feedback-tab').click(()=>{
+				$('#mob_feedbackform').fadeToggle('fast',() => $('#mob_feedback-tab').toggleClass('down-arrow'));
+			});
+
+			// Code to hide the feedback-form on scroll
+			let prevScrollpos = window.pageYOffset;
+			window.addEventListener('scroll',() => {
+			var currentScrollPos = window.pageYOffset;
+			if (prevScrollpos != currentScrollPos) {
+				$("#feedback-form").hide();
+				$("#feedback-tab").removeClass('down-arrow');
+			}
+			});
+
+			//  Configure form behaviour when "Specific content" radio is selected
+			$('input[type="radio"]#specific').on('change',(e) => {
+			if(e.target.checked){
+				// clear any existing selection, reset seltected text and reset comments section
+				document.getElementById("copiedText").value = '';
+				document.getElementById("guidetext").innerHTML = 'Please select the text of concern to enter your comments';
+				$("textarea#comments").prop('disabled', true);
+
+				// Indicate form state using class 'specific'
+				$('#feedback-form').removeClass('article');
+				$('#feedback-form').addClass('specific');
+
+				// Hide feedback when selection starts
+				$(".product-card-container").on('mousedown',hideFeedbackHandler);
+
+				// Show feedback when selection ends
+				document.addEventListener('mouseup',copySelectedText);
+
+				// Prevent selection of form content
+				$("#feedback-form").on('mousedown',stopPropagationHandler);
+				$("#feedback-tab").on('mousedown',stopPropagationHandler);
+
+				// Validate form post change
+				formChangeHandler()
+			}
+			});
+
+			// Configure form behaviour when "This site or page" radio is selected
+			$('input[type="radio"]#article').on('change',(e) => {
+			if(e.target.checked){
+
+				// clear any existing selection, reset seltected text and reset comments section
+				document.getElementById("copiedText").value = '';
+				document.getElementById("guidetext").innerHTML = 'Please select the text of concern to enter your comments';
+				$("textarea#comments").prop('disabled', false);
+
+				// Indicate form state using class 'article'
+				$('#feedback-form').addClass('article');
+				$('#feedback-form').removeClass('specific');
+
+				// Clear event listeners
+				$(".product-card-container").off('mousedown',hideFeedbackHandler);
+				document.removeEventListener('mouseup',copySelectedText);
+				$("#feedback-form").off('mousedown',stopPropagationHandler);
+				$("#feedback-tab").off('mousedown',stopPropagationHandler);
+
+				// Validate form post change
+				formChangeHandler();
+			}
+			});
+			
+		});
+
+		function stopPropagationHandler(e){
+			e.stopPropagation();
+		}
+
+		function hideFeedbackHandler(){
+			$("#feedback-form").hide();
+			$("#feedback-tab").removeClass('down-arrow');
+		}
+
+		function showFeedbackHandler(){
+			$("#feedback-form").show();
+			$('#feedback-tab').addClass('down-arrow');
+		}
+
+		function copySelectedText() {
+			//  console.log("entered event listener");
+			let thetext = getTextSelectionHandler();
+			if (thetext.length >= 1) {
+			// console.log(thetext);
+			document.getElementById("copiedText").value = thetext;
+			document.getElementById("guidetext").innerHTML = thetext;
+			$("textarea#comments").prop('disabled', false);
+			showFeedbackHandler();
+			}
+
+			// update form validity
+			formChangeHandler();
+		}
+
+		function getTextSelectionHandler() {
+			let selectedText = "";
+			if (window.getSelection().containsNode(document.body, true)) {
+			selectedText = window.getSelection().toString();
+			}
+			return selectedText;
+		}
+
+		function clearText(){
+			document.getElementById("copiedText").value = '';
+			document.getElementById("guidetext").innerHTML = 'Please select the text of concern to enter your comments';
+			$("textarea#comments").prop('disabled', true);
+			formChangeHandler();
+		}
+
+		// Function to reset form data
+		function clearFormData() {
+			document.getElementById("feedback-form").reset();
+			$('[name="response"]:checked').each((pos,ele) => ele.checked = false)
+			$('[name="feedbackoption"]:checked').each((pos,ele) => ele.checked = false);
+			document.getElementById('copiedText').value = '';
+			document.getElementById("guidetext").innerHTML = 'Please select the text of concern to enter your comments';
+			document.getElementById('comments').value = '';
+			document.getElementById('userEmail').value = '';
+			$(".product-card-container").off('mousedown',hideFeedbackHandler);
+			document.removeEventListener('mouseup',copySelectedText);
+			$("#feedback-form").off('mousedown',stopPropagationHandler);
+			$("#feedback-tab").off('mousedown',stopPropagationHandler);
+			$('#feedback-form').removeClass('yes-response no-response partly-response specific article');
+			document.getElementById('loading').innerHTML = "";
+			$('#comments').prop('disabled', true);
+			$('#submit').prop('disabled', true);
+		}
+
+		// Function count the remaining characters available for comments section
+		// Also updates form validity state
+		function countChars(ele){
+			let maxLength = 2000;
+			let strLength = ele.value.length;
+			let infoText;
+
+			if(strLength == 0){
+			infoText = '2000 characters remaining';
+			}
+			else if (strLength > maxLength) {
+			infoText = strLength + ' out of ' + maxLength + ' characters';
+			} else {
+			infoText = (maxLength - strLength) + ' characters remaining';
+			}
+
+			document.getElementById("charNum").innerHTML = infoText;
+			formChangeHandler();
+		}
+
+		// Function to configure form behaviour when "Yes", "No" & "Partly" radios are selected
+		function responseChangeHandler(event,addClass,removeClass){
+			if(event.target.checked){
+			$('#feedback-form').removeClass(removeClass);
+			$('#feedback-form').addClass(addClass);
+			}
+		}
+
+		// Function to determin  validity of current form state
+		function FormUIValidationHandler(){
+			let validationState = false;
+			let responseValue = $('[name="response"]:checked').length?$('[name="response"]:checked')[0].value:'';
+			let feedbackScope = $('[name="feedbackoption"]:checked').length?$('[name="feedbackoption"]:checked')[0].value:'';
+			let copiedText = document.getElementById('copiedText').value;
+			let commentsText = document.getElementById('comments').value;
+			let email = document.getElementById('userEmail').value;
+
+			if(responseValue === 'yes'){
+			validationState = true;
+			}
+			else if(responseValue === 'partly' || responseValue === 'no'){
+			if(feedbackScope === 'article' && commentsText.length) validationState = true;
+			else if (feedbackScope === 'specific' && copiedText.length && commentsText.length) validationState = true;
+			}
+
+			// console.log('validity: ',validationState);
+			return validationState;
+		}
+
+		// Function to change "submit" btn state based on validity
+		function formChangeHandler(e){
+			e? e.stopPropagation() : '';
+			let validityState = FormUIValidationHandler();
+			if(validityState) $('#submit').prop('disabled', false);
+			else $('#submit').prop('disabled', true);
+			document.querySelector('#loading').innerHTML = '';
+		}
+
+		function getProductName() {
+			var product = String(window.location.pathname.split("/")[1]);
+			if (product == "api") {
+				product = "API";
+			} else if (product == "integration") {
+				product = "Integration";
+			} else if (product == "b2b") {
+				product = "B2B";
+			}
+			return product;
+			}
+
+		function getPageURL() {
+			return window.location.href;
+		}
+
+		function feedbackSubmitHandler(e){
+			e.preventDefault();
+			sendResponse();
+		}
+
+		function sendResponse() {
+
+			let validationState = FormUIValidationHandler();
+			if(!validationState){
+			document.querySelector('#loading').innerHTML = '<span style="color: #D22D3D;">Invalid input, please check your responses and try again</span>'
+			}
+			else{
+			document.querySelector('#loading').innerHTML = '';
+			}
+
+			let responsevalue = $('[name="response"]:checked').length?$('[name="response"]:checked')[0].value:'';
+			let feedbackoption = $('[name="feedbackoption"]:checked').length?$('[name="feedbackoption"]:checked')[0].value:'';
+			let feedback_on = '';
+			if (feedbackoption == "specific") {
+			feedback_on = "Specific content in this article.";
+			} else if (feedbackoption == "article") {
+			feedback_on = "This article or documentation in general.";
+			}
+			let copiedtext = document.getElementById('copiedText').value;
+			let comments = document.getElementById('comments').value;
+			var article_title = 'docs.webmethods.io landing page';
+			var email = document.getElementById('userEmail').value;
+			var product = getProductName();
+			var pageURL = getPageURL();
+
+			$.ajax({
+			type: "POST",
+			url: 'https://docfeedback.int-aws-us.webmethods.io/runflow/run/sync/1RHiXt9MXS',
+			data: {
+				article_title: article_title,
+				responsevalue: responsevalue,
+				feedbackoption: feedback_on,
+				copiedtext: copiedtext,
+				comments: comments,
+				email: email,
+				product: product,
+				pageURL: pageURL
+			},
+			success: function (res) {
+				// console.log('success', res);
+				clearFormData();
+				$('#loading').html("<span class='container alert alert-success'>Thank you! We value your feedback.</span>");
+				setTimeout(function () {
+				document.getElementById('loading').innerHTML = "";
+				hideFeedbackHandler();
+				}, 2000); 
+			}
+			});
+		}
+	</script>
+
+	<!-- Mobile form functions -->
+	<script>
+
+		// Hiding the feedback form on clicking the down-carrot button
+		function mobileHideFeedbackHandler(event=null){
+			if(event) event.preventDefault();
+			$("#mob_feedbackform").hide();
+			$("#mob_feedback-tab").removeClass('down-arrow');
+			document.getElementById("message").classList.remove('alert-error');
+			document.getElementById("message").classList.remove('alert-success');
+			document.getElementById("message").innerHTML = "";
+		}
+
+		// Reset the fields of the feedback by clearing it
+		// Hide the feedback form
+		function mobileResetForm() {
+			//$("button[type='button']").removeClass("mob_clicked_btn");
+			document.getElementById("mob_comments").value = "";
+			document.getElementById("message").classList.remove('alert-error');
+			document.getElementById("message").classList.remove('alert-success');
+			document.getElementById("message").innerHTML = "";
+			document.querySelectorAll('input[name="mob_responseValue"]').forEach( e => e.checked = false);
+			$("#mob_feedbackform").hide();
+			$("#mob_feedback-tab").removeClass('down-arrow');
+		}
+
+		function mobileOnChangeHandler(event){
+			document.getElementById("message").classList.remove('alert-error');
+			document.getElementById("message").classList.remove('alert-success');
+			document.getElementById("message").innerHTML = "";
+		}
+
+		  // Validate the fields of the feedback form
+  // If invalid, display error message
+  // If valid, call 'mobileSendResponse' function
+  function mobileValidateForm(e) {
+    e.preventDefault();
+    let mobForm = new FormData(document.getElementById("mob_feedbackform"));
+    let mobComments = mobForm.get("mob_comments");
+    let mobResponseValue = mobForm.get("mob_responseValue");
+    let messageBox = document.getElementById('message');
+
+    let noResponse = ! Boolean(mobResponseValue); // "true" if no response (between 'yes' & 'no' is given), else "false"
+    let noComment = ! Boolean(mobComments.trim().length); // "true" if no comment / blank comment was given, else false.
+
+    if( noResponse || (mobResponseValue === 'no' && noComment ) ){
+      // Results in 'true' if:
+      // The user has either not given a response (irrespective of comment value)
+      // Or, the user has chosen 'no' but not given a comment.
+
+      messageBox.classList.add('alert-error');
+      messageBox.classList.remove('alert-success');
+      messageBox.innerHTML = "Invalid input, please check your responses and try again";
+    }
+    else{
+      messageBox.innerHTML = "";
+      //console.log('Feedback accepted!');  
+      mobileSendResponse();
+    }
+  }
+
+  // Function to send the mobile feedback form
+	function mobileSendResponse() {
+		let product = getProductName();
+		let mobForm = new FormData(document.getElementById("mob_feedbackform"));
+		let mob_comments = mobForm.get("mob_comments");
+		let mob_responseValue = mobForm.get("mob_responseValue") || '';
+
+		let article = document.getElementsByTagName("h1");
+		let productName = document.querySelector('.title-product');
+		let article_title = article.length ? article[0].innerHTML : (productName?( productName.innerHTML + ' Product Welcome Page'):'Main landing page');
+
+		$.ajax({
+			type: "POST",
+			url: 'https://docfeedback.int-aws-us.webmethods.io/runflow/run/sync/1shkZsCOwc',
+			data: {
+			article_title: article_title,
+			responsevalue: mob_responseValue,
+			comments: mob_comments,
+			product: product
+			},
+			success: function (res) {
+			// console.log('success', res);
+			// mobileResetForm();
+
+			// Resetting the form
+				document.getElementById("mob_comments").value = "";
+				document.getElementById("message").classList.remove('alert-error');
+				document.getElementById("message").classList.remove('alert-success');
+				document.getElementById("message").innerHTML = "";
+				document.querySelectorAll('input[name="mob_responseValue"]').forEach( e => e.checked = false);
+
+				document.getElementById("message").classList.add('alert-success');
+				document.getElementById("message").classList.remove('alert-error');
+				document.getElementById('message').innerHTML = "Thank you! We value your feedback.";
+
+				setTimeout(function () {
+				document.getElementById("message").classList.remove('alert-error');
+				document.getElementById("message").classList.remove('alert-success');
+				document.getElementById("message").innerHTML = "";
+				mobileHideFeedbackHandler();
+				}, 3000);
+			}
+		});
+	}
+
+/*
+		function resetMobileForm() {
+		   $("button[type='button']").removeClass("mob_clicked_btn");
+		   document.getElementById("mob_responseValue").value = "";
+		   document.getElementById("mob_comments").value = "";
+		 }
+	  
+		 function mobileSaveResponse(mob_clicked_button) {
+		   document.getElementById("mob_responseValue").value = document.getElementById(mob_clicked_button).getAttribute('value');
+	   
+		   $("button[type='button']").removeClass("mob_clicked_btn");
+	   
+		   $("#" + mob_clicked_button).addClass("mob_clicked_btn");
+		 }
+	  
+	  
+		 function mobileValidateForm() {
+		   var x = document.getElementById("mob_responseValue").value;
+		   var z = document.getElementById('mob_comments').value;
+		   var trim_z = z.trim();
+		   if ((x.length === 0) && (trim_z.length < 1)) {
+			 document.getElementById('message').innerHTML = "<div id='emptyFormError' class='container mt-2'>Please enter your feedback and submit!</div>";
+		   } else if ((x === "No") && (trim_z.length < 1)) {
+			 document.getElementById('message').innerHTML = "<div id='emptyFormError' class='container mt-2'>Please enter your feedback and submit!</div>";
+		   } else {
+			 mobileSendResponse();
+		   }
+		   setTimeout(function () {
+			 document.getElementById('message').innerHTML = "";
+		   }, 5000);
+		 }
+	  
+		 function mobileSendResponse() {
+		   var product = getProductName();
+		   var mob_responseValue = document.getElementById('mob_responseValue').value || '';
+		   var mob_comments = document.getElementById('mob_comments').value;
+		   var article = document.getElementsByTagName("h1");
+		   var productName = document.querySelector('.title-product');
+		   var article_title = article.length ? article[0].innerHTML : (productName?( productName.innerHTML + ' Product Welcome Page'):'Main landing page');
+	  
+		  //  console.log(article_title);
+	  
+		  $.ajax({
+			type: "POST",
+			url: 'https://docfeedback.int-aws-us.webmethods.io/runflow/run/sync/1shkZsCOwc',
+			data: {
+			  article_title: article_title,
+			  responsevalue: mob_responseValue,
+			  comments: mob_comments,
+			  product: product
+			},
+			success: function (res) {
+			  // console.log('success', res);
+			  resetMobileForm();
+			  document.getElementById('message').innerHTML = "<div class='container alert alert-success'>Thank you! We value your feedback.</div>";
+			  setTimeout(function () {
+				document.getElementById("message").innerHTML = "";
+			  }, 5000);
+			}
+		  });
+		}
+	*/   
+	   
+	  </script>
+	  <!-- END: Mobile form functions -->
+</body>
+
+</html>
+<gcse:searchresults></gcse:searchresults>
+
